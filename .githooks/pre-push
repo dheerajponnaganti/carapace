@@ -1,0 +1,10 @@
+#!/bin/sh
+# main and dev change only through pull requests: work on a branch, open a PR, merge it when the checks pass.
+# Turned on per clone with: git config core.hooksPath .githooks
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [ "$remote_ref" = "refs/heads/main" ] || [ "$remote_ref" = "refs/heads/dev" ]; then
+    echo "carapace: ${remote_ref#refs/heads/} changes only through a pull request. Push a branch and open a PR (gh pr create --base dev)." >&2
+    exit 1
+  fi
+done
+exit 0

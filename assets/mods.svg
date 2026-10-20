@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-labelledby="t d">
+  <title id="t">The twelve mods</title>
+  <desc id="d">Twelve mods, each with what it does for you and its command: Clean View, Crew, Refine, Work Report, Logbook, Footer, Shipyard, Secret guard, Package guard, Trimmer, Window and Safe symbols.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+  </style>
+  <rect width="1280" height="640" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="640" rx="18" fill="url(#grain)"/>
+  <rect x="20" y="20" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="128" y="20" width="80" height="3" rx="1.5" fill="#3DDC97"/>
+  <circle cx="168" cy="72" r="28" fill="#3DDC97" opacity="0.12"/>
+  <text class="mono" x="168" y="82" font-size="28" fill="#3DDC97" text-anchor="middle">●</text>
+  <text class="sans" x="168" y="132" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Clean View</text>
+  <text class="sans" x="168" y="160" font-size="13" fill="#9FB8C9" text-anchor="middle">A plain checklist instead of tool noise</text>
+  <text class="mono" x="168" y="188" font-size="13" fill="#5E7E96" text-anchor="middle">/clean</text>
+  <rect x="332" y="20" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="440" y="20" width="80" height="3" rx="1.5" fill="#FF5FD2"/>
+  <circle cx="480" cy="72" r="28" fill="#FF5FD2" opacity="0.12"/>
+  <text class="mono" x="480" y="82" font-size="28" fill="#FF5FD2" text-anchor="middle">◆</text>
+  <text class="sans" x="480" y="132" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Crew</text>
+  <text class="sans" x="480" y="160" font-size="13" fill="#9FB8C9" text-anchor="middle">Helpers split the job, each on the right model</text>
+  <text class="mono" x="480" y="188" font-size="13" fill="#5E7E96" text-anchor="middle">/crew</text>
+  <rect x="644" y="20" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="752" y="20" width="80" height="3" rx="1.5" fill="#E8B44A"/>
+  <circle cx="792" cy="72" r="28" fill="#E8B44A" opacity="0.12"/>
+  <text class="mono" x="792" y="82" font-size="28" fill="#E8B44A" text-anchor="middle">✦</text>
+  <text class="sans" x="792" y="132" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Refine</text>
+  <text class="sans" x="792" y="160" font-size="13" fill="#9FB8C9" text-anchor="middle">Turns a rough prompt into a clear one</text>
+  <text class="mono" x="792" y="188" font-size="13" fill="#5E7E96" text-anchor="middle">/refine</text>
+  <rect x="956" y="20" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="1064" y="20" width="80" height="3" rx="1.5" fill="#3FE0F0"/>
+  <circle cx="1104" cy="72" r="28" fill="#3FE0F0" opacity="0.12"/>
+  <text class="mono" x="1104" y="82" font-size="28" fill="#3FE0F0" text-anchor="middle">▤</text>
+  <text class="sans" x="1104" y="132" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Work Report</text>
+  <text class="sans" x="1104" y="160" font-size="13" fill="#9FB8C9" text-anchor="middle">Hours saved and what they are worth</text>
+  <text class="mono" x="1104" y="188" font-size="13" fill="#5E7E96" text-anchor="middle">/report</text>
+  <rect x="20" y="224" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="128" y="224" width="80" height="3" rx="1.5" fill="#3FE0F0"/>
+  <circle cx="168" cy="276" r="28" fill="#3FE0F0" opacity="0.12"/>
+  <text class="mono" x="168" y="286" font-size="28" fill="#3FE0F0" text-anchor="middle">▥</text>
+  <text class="sans" x="168" y="336" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Logbook</text>
+  <text class="sans" x="168" y="364" font-size="13" fill="#9FB8C9" text-anchor="middle">Memory that carries across sessions</text>
+  <text class="mono" x="168" y="392" font-size="13" fill="#5E7E96" text-anchor="middle">/logbook</text>
+  <rect x="332" y="224" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="440" y="224" width="80" height="3" rx="1.5" fill="#8EA7FF"/>
+  <circle cx="480" cy="276" r="28" fill="#8EA7FF" opacity="0.12"/>
+  <text class="mono" x="480" y="286" font-size="28" fill="#8EA7FF" text-anchor="middle">◈</text>
+  <text class="sans" x="480" y="336" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Footer</text>
+  <text class="sans" x="480" y="364" font-size="13" fill="#9FB8C9" text-anchor="middle">Model, effort, branch, cache countdown</text>
+  <text class="mono" x="480" y="392" font-size="13" fill="#5E7E96" text-anchor="middle">click it</text>
+  <rect x="644" y="224" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="752" y="224" width="80" height="3" rx="1.5" fill="#3FE0F0"/>
+  <circle cx="792" cy="276" r="28" fill="#3FE0F0" opacity="0.12"/>
+  <text class="mono" x="792" y="286" font-size="28" fill="#3FE0F0" text-anchor="middle">⌬</text>
+  <text class="sans" x="792" y="336" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Shipyard</text>
+  <text class="sans" x="792" y="364" font-size="13" fill="#9FB8C9" text-anchor="middle">Every tool, pins and updates</text>
+  <text class="mono" x="792" y="392" font-size="13" fill="#5E7E96" text-anchor="middle">/mods</text>
+  <rect x="956" y="224" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="1064" y="224" width="80" height="3" rx="1.5" fill="#FF5C7A"/>
+  <circle cx="1104" cy="276" r="28" fill="#FF5C7A" opacity="0.12"/>
+  <text class="mono" x="1104" y="286" font-size="28" fill="#FF5C7A" text-anchor="middle">⛨</text>
+  <text class="sans" x="1104" y="336" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Secret guard</text>
+  <text class="sans" x="1104" y="364" font-size="13" fill="#9FB8C9" text-anchor="middle">Keys and .env files stay out of the chat</text>
+  <text class="mono" x="1104" y="392" font-size="13" fill="#5E7E96" text-anchor="middle">/secrets</text>
+  <rect x="20" y="428" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="128" y="428" width="80" height="3" rx="1.5" fill="#E8B44A"/>
+  <circle cx="168" cy="480" r="28" fill="#E8B44A" opacity="0.12"/>
+  <text class="mono" x="168" y="490" font-size="28" fill="#E8B44A" text-anchor="middle">⛶</text>
+  <text class="sans" x="168" y="540" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Package guard</text>
+  <text class="sans" x="168" y="568" font-size="13" fill="#9FB8C9" text-anchor="middle">Made-up or brand-new packages held</text>
+  <text class="mono" x="168" y="596" font-size="13" fill="#5E7E96" text-anchor="middle">/packages</text>
+  <rect x="332" y="428" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="440" y="428" width="80" height="3" rx="1.5" fill="#8EA7FF"/>
+  <circle cx="480" cy="480" r="28" fill="#8EA7FF" opacity="0.12"/>
+  <text class="mono" x="480" y="490" font-size="28" fill="#8EA7FF" text-anchor="middle">✂</text>
+  <text class="sans" x="480" y="540" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Trimmer</text>
+  <text class="sans" x="480" y="568" font-size="13" fill="#9FB8C9" text-anchor="middle">Long logs cut to the failures</text>
+  <text class="mono" x="480" y="596" font-size="13" fill="#5E7E96" text-anchor="middle">/trim</text>
+  <rect x="644" y="428" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="752" y="428" width="80" height="3" rx="1.5" fill="#1B8FA6"/>
+  <circle cx="792" cy="480" r="28" fill="#1B8FA6" opacity="0.12"/>
+  <text class="mono" x="792" y="490" font-size="28" fill="#1B8FA6" text-anchor="middle">▣</text>
+  <text class="sans" x="792" y="540" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Window</text>
+  <text class="sans" x="792" y="568" font-size="13" fill="#9FB8C9" text-anchor="middle">Terminal darkens as the chat fills</text>
+  <text class="mono" x="792" y="596" font-size="13" fill="#5E7E96" text-anchor="middle">automatic</text>
+  <rect x="956" y="428" width="296" height="188" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="1064" y="428" width="80" height="3" rx="1.5" fill="#5E7E96"/>
+  <circle cx="1104" cy="480" r="28" fill="#5E7E96" opacity="0.12"/>
+  <text class="mono" x="1104" y="490" font-size="28" fill="#5E7E96" text-anchor="middle">◇</text>
+  <text class="sans" x="1104" y="540" font-size="19" fill="#D8ECF7" font-weight="700" text-anchor="middle">Safe symbols</text>
+  <text class="sans" x="1104" y="568" font-size="13" fill="#9FB8C9" text-anchor="middle">Clean drawing on any console</text>
+  <text class="mono" x="1104" y="596" font-size="13" fill="#5E7E96" text-anchor="middle">/mods glyphs</text>
+</svg>

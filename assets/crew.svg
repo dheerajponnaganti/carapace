@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 580" width="1280" height="580" role="img" aria-labelledby="t d">
+  <title id="t">Crew: helpers and their models</title>
+  <desc id="d">Left, a sonar radar with five helper contacts shown by initials; the closer to the core, the more progress, and one finished helper sits at the core in green. Right, eight job categories mapped to Haiku, Sonnet or Opus. Below, file lanes per helper with a clash warning when two write the same file, and the done gate that sends a helper back until the project checks pass.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3FE0F0" stop-opacity="0"/><stop offset="1" stop-color="#3FE0F0" stop-opacity="0.55"/></linearGradient>
+    <radialGradient id="ping" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#3FE0F0" stop-opacity="0.22"/><stop offset="1" stop-color="#3FE0F0" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    .sweep{transform-origin:300px 230px;animation:spin 6s linear infinite}.blip{animation:blink 2s ease-in-out infinite}.k2{animation-delay:-.7s}.k3{animation-delay:-1.3s}
+    @keyframes spin{to{transform:rotate(360deg)}}@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1280" height="580" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="580" rx="18" fill="url(#grain)"/>
+  <text class="mono" x="40" y="46" font-size="13" letter-spacing="3" fill="#5E7E96">CREW</text>
+  <text class="sans" x="40" y="80" font-size="24" font-weight="700" fill="#D8ECF7">Five helpers, their files and their models</text>
+  <g transform="translate(300 244) scale(0.88) translate(-300 -238)">
+  <circle cx="300" cy="238" r="150" fill="url(#ping)"/>
+  <g fill="none" stroke="#1B8FA6" stroke-opacity="0.45">
+    <circle cx="300" cy="238" r="50"/><circle cx="300" cy="238" r="100"/><circle cx="300" cy="238" r="150" stroke-dasharray="2 6"/>
+    <line x1="150" y1="238" x2="450" y2="238" stroke-opacity="0.2"/><line x1="300" y1="88" x2="300" y2="388" stroke-opacity="0.2"/>
+  </g>
+  <g class="sweep">
+    <path d="M300 238 L450 238 A150 150 0 0 0 430 163 Z" fill="url(#beam)" opacity="0.35"/>
+    <line x1="300" y1="238" x2="450" y2="238" stroke="#3FE0F0" stroke-width="1.5" opacity="0.8"/>
+  </g>
+  <circle cx="300" cy="238" r="18" fill="#0B1B2A" stroke="#3DDC97" stroke-width="2" filter="url(#glow)"/>
+  <text class="mono" x="300" y="243" font-size="13" font-weight="700" text-anchor="middle" fill="#3DDC97">AB</text>
+  <g class="blip "><circle cx="360" cy="190" r="15" fill="#0B1B2A" stroke="#3FE0F0" filter="url(#glow)"/><text class="mono" x="360" y="194" font-size="12" font-weight="700" text-anchor="middle" fill="#3FE0F0">CD</text></g>
+  <g class="blip k2"><circle cx="250" cy="300" r="15" fill="#0B1B2A" stroke="#FF5FD2" filter="url(#glow)"/><text class="mono" x="250" y="304" font-size="12" font-weight="700" text-anchor="middle" fill="#FF5FD2">EF</text></g>
+  <g class="blip k3"><circle cx="222" cy="176" r="15" fill="#0B1B2A" stroke="#8EA7FF" filter="url(#glow)"/><text class="mono" x="222" y="180" font-size="12" font-weight="700" text-anchor="middle" fill="#8EA7FF">GH</text></g>
+  <g class="blip k2"><circle cx="405" cy="290" r="15" fill="#0B1B2A" stroke="#E8B44A" filter="url(#glow)"/><text class="mono" x="405" y="294" font-size="12" font-weight="700" text-anchor="middle" fill="#E8B44A">JK</text></g>
+  </g>
+  <text class="mono" x="40" y="376" font-size="12" fill="#5E7E96">green at the core: done</text>
+  <text class="sans" x="640" y="130" font-size="18" font-weight="700" fill="#D8ECF7">Each helper gets the model its job needs</text>
+  <text class="sans" x="640" y="164" font-size="14" font-weight="700" fill="#D8ECF7">Lookup</text><text class="mono" x="740" y="164" font-size="12" fill="#5E7E96">find, search, list, read</text>
+  <g><rect x="1100" y="149" width="104" height="20" rx="10" fill="#12283A" stroke="#3DDC97" stroke-opacity="0.6"/><circle cx="1112" cy="159" r="7" fill="#3DDC97"/><text class="mono" x="1112" y="163" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">H</text><text class="mono" x="1126" y="163" font-size="12" fill="#3DDC97">Haiku</text></g>
+  <text class="sans" x="640" y="188" font-size="14" font-weight="700" fill="#D8ECF7">Extract</text><text class="mono" x="740" y="188" font-size="12" fill="#5E7E96">pull data, summarize a doc</text>
+  <g><rect x="1100" y="173" width="104" height="20" rx="10" fill="#12283A" stroke="#3DDC97" stroke-opacity="0.6"/><circle cx="1112" cy="183" r="7" fill="#3DDC97"/><text class="mono" x="1112" y="187" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">H</text><text class="mono" x="1126" y="187" font-size="12" fill="#3DDC97">Haiku</text></g>
+  <text class="sans" x="640" y="212" font-size="14" font-weight="700" fill="#D8ECF7">Check</text><text class="mono" x="740" y="212" font-size="12" fill="#5E7E96">run tests, lint, validate</text>
+  <g><rect x="1100" y="197" width="104" height="20" rx="10" fill="#12283A" stroke="#3DDC97" stroke-opacity="0.6"/><circle cx="1112" cy="207" r="7" fill="#3DDC97"/><text class="mono" x="1112" y="211" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">H</text><text class="mono" x="1126" y="211" font-size="12" fill="#3DDC97">Haiku</text></g>
+  <text class="sans" x="640" y="236" font-size="14" font-weight="700" fill="#D8ECF7">Write</text><text class="mono" x="740" y="236" font-size="12" fill="#5E7E96">emails, copy, docs, slogans</text>
+  <g><rect x="1100" y="221" width="104" height="20" rx="10" fill="#12283A" stroke="#3FE0F0" stroke-opacity="0.6"/><circle cx="1112" cy="231" r="7" fill="#3FE0F0"/><text class="mono" x="1112" y="235" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">S</text><text class="mono" x="1126" y="235" font-size="12" fill="#3FE0F0">Sonnet</text></g>
+  <text class="sans" x="640" y="260" font-size="14" font-weight="700" fill="#D8ECF7">Code</text><text class="mono" x="740" y="260" font-size="12" fill="#5E7E96">build, fix, refactor</text>
+  <g><rect x="1100" y="245" width="104" height="20" rx="10" fill="#12283A" stroke="#3FE0F0" stroke-opacity="0.6"/><circle cx="1112" cy="255" r="7" fill="#3FE0F0"/><text class="mono" x="1112" y="259" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">S</text><text class="mono" x="1126" y="259" font-size="12" fill="#3FE0F0">Sonnet</text></g>
+  <text class="sans" x="640" y="284" font-size="14" font-weight="700" fill="#D8ECF7">Research</text><text class="mono" x="740" y="284" font-size="12" fill="#5E7E96">compare options, analyze</text>
+  <g><rect x="1100" y="269" width="104" height="20" rx="10" fill="#12283A" stroke="#3FE0F0" stroke-opacity="0.6"/><circle cx="1112" cy="279" r="7" fill="#3FE0F0"/><text class="mono" x="1112" y="283" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">S</text><text class="mono" x="1126" y="283" font-size="12" fill="#3FE0F0">Sonnet</text></g>
+  <text class="sans" x="640" y="308" font-size="14" font-weight="700" fill="#D8ECF7">Design</text><text class="mono" x="740" y="308" font-size="12" fill="#5E7E96">system design, plans, architecture</text>
+  <g><rect x="1100" y="293" width="104" height="20" rx="10" fill="#12283A" stroke="#FF5FD2" stroke-opacity="0.6"/><circle cx="1112" cy="303" r="7" fill="#FF5FD2"/><text class="mono" x="1112" y="307" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">O</text><text class="mono" x="1126" y="307" font-size="12" fill="#FF5FD2">Opus</text></g>
+  <text class="sans" x="640" y="332" font-size="14" font-weight="700" fill="#D8ECF7">Deep debug</text><text class="mono" x="740" y="332" font-size="12" fill="#5E7E96">root cause, code review, security</text>
+  <g><rect x="1100" y="317" width="104" height="20" rx="10" fill="#12283A" stroke="#FF5FD2" stroke-opacity="0.6"/><circle cx="1112" cy="327" r="7" fill="#FF5FD2"/><text class="mono" x="1112" y="331" font-size="10" font-weight="700" text-anchor="middle" fill="#06121C">O</text><text class="mono" x="1126" y="331" font-size="12" fill="#FF5FD2">Opus</text></g>
+  <text class="mono" x="640" y="376" font-size="12" fill="#5E7E96">Never stronger than your own model.</text>
+<rect x="40" y="410" width="590" height="150" rx="12" fill="#0B1B2A" stroke="#17324A"/>
+<text class="mono" x="60" y="434" font-size="11" fill="#5E7E96">LANES</text>
+<rect x="60" y="447" width="26" height="20" rx="3" fill="#3FE0F0"/>
+<text class="mono" x="73" y="461" font-size="12" fill="#06121C" text-anchor="middle" font-weight="700">CD</text>
+<text class="mono" x="98" y="462" font-size="13" fill="#5E7E96">app.tsx</text>
+<text class="mono" x="168" y="462" font-size="13" fill="#3FE0F0">login.ts</text>
+<text class="mono" x="246" y="462" font-size="13" fill="#FF5C7A">⚠auth.ts</text>
+<rect x="60" y="475" width="26" height="20" rx="3" fill="#FF5FD2"/>
+<text class="mono" x="73" y="489" font-size="12" fill="#06121C" text-anchor="middle" font-weight="700">EF</text>
+<text class="mono" x="98" y="490" font-size="13" fill="#FF5C7A">⚠auth.ts</text>
+<text class="mono" x="176" y="490" font-size="13" fill="#3FE0F0">auth.test.ts</text>
+<rect x="60" y="503" width="26" height="20" rx="3" fill="#3DDC97"/>
+<text class="mono" x="73" y="517" font-size="12" fill="#06121C" text-anchor="middle" font-weight="700">AB</text>
+<text class="mono" x="98" y="518" font-size="13" fill="#3DDC97">README.md</text>
+<text class="mono" x="184" y="518" font-size="13" fill="#3DDC97">notes.md</text>
+<text class="mono" x="60" y="548" font-size="11" fill="#5E7E96">read is muted, write is cyan, done is green, a clash is red</text>
+<rect x="650" y="410" width="590" height="150" rx="12" fill="#0B1B2A" stroke="#1B8FA6"/>
+<text class="mono" x="670" y="434" font-size="11" fill="#5E7E96">DONE GATE</text>
+<text class="mono" x="670" y="464" font-size="14" fill="#3FE0F0" font-weight="700">.carapace/done-checks</text>
+<text class="mono" x="670" y="488" font-size="13" fill="#D8ECF7">npm test</text>
+<text class="mono" x="670" y="508" font-size="13" fill="#D8ECF7">npm run lint</text>
+<text class="sans" x="900" y="464" font-size="13" fill="#D8ECF7">A helper cannot finish until every</text>
+<text class="sans" x="900" y="484" font-size="13" fill="#D8ECF7">line passes. It is sent back twice</text>
+<text class="sans" x="900" y="504" font-size="13" fill="#D8ECF7">with the output, then gives up.</text>
+<text class="mono" x="900" y="538" font-size="11" fill="#E8B44A">gate: retrying (1)</text>
+<text class="mono" x="1030" y="538" font-size="11" fill="#3DDC97">gate: passed</text>
+<text class="mono" x="1128" y="538" font-size="11" fill="#FF5C7A">gate: failed</text>
+</svg>

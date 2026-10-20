@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Subscription or API credits</title>
+  <desc id="d">The bar adapts to your account. A subscription shows O2 as the 5-hour plan limit with a refill time. API credits show tokens and spend, or O2 as the budget left once you set a budget with /budget.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1280" height="420" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="420" rx="18" fill="url(#grain)"/>
+<text class="mono" x="40" y="46" font-size="13" letter-spacing="3" fill="#5E7E96">ACCOUNTS</text>
+<text class="sans" x="40" y="80" font-size="24" fill="#D8ECF7" font-weight="700" xml:space="preserve">The bar shows what matters for your plan</text>
+<rect x="40" y="110" width="380" height="250" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="80" y="110" width="80" height="2" rx="1" fill="#3DDC97" opacity=".8"/>
+<text class="sans" x="64" y="146" font-size="18" fill="#D8ECF7" font-weight="700" xml:space="preserve">Subscription</text>
+<text class="sans" x="64" y="170" font-size="13" fill="#5E7E96" xml:space="preserve">O₂ is your plan's 5-hour limit</text>
+<rect x="60" y="190" width="340" height="56" rx="8" fill="#06121C" stroke="#1A3850"/>
+<text class="mono" x="72" y="214" font-size="12" fill="#3FE0F0" xml:space="preserve">O₂ 62% ↻ 4:20pm   ▼ 38% shallow ━━━━━━</text>
+<text class="mono" x="72" y="236" font-size="11" fill="#E8B44A" xml:space="preserve">footer: empty in ~40m</text>
+<text class="sans" x="64" y="284" font-size="12" fill="#5E7E96" xml:space="preserve">The footer forecasts when the limit runs</text>
+<text class="sans" x="64" y="304" font-size="12" fill="#5E7E96" xml:space="preserve">out.</text>
+<rect x="450" y="110" width="380" height="250" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="490" y="110" width="80" height="2" rx="1" fill="#FF5FD2" opacity=".8"/>
+<text class="sans" x="474" y="146" font-size="18" fill="#D8ECF7" font-weight="700" xml:space="preserve">API credits</text>
+<text class="sans" x="474" y="170" font-size="13" fill="#5E7E96" xml:space="preserve">tokens and spend, no budget</text>
+<rect x="470" y="190" width="340" height="56" rx="8" fill="#06121C" stroke="#1A3850"/>
+<text class="mono" x="482" y="214" font-size="12" fill="#5E7E96" xml:space="preserve">⛁ 1.2M tok · $3.40   ▼ 38% ━━━━━━</text>
+<text class="mono" x="482" y="236" font-size="11" fill="#5E7E96" xml:space="preserve">footer: no limit, so no forecast</text>
+<text class="sans" x="474" y="284" font-size="12" fill="#5E7E96" xml:space="preserve">Counted since the session began.</text>
+<rect x="860" y="110" width="380" height="250" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="900" y="110" width="80" height="2" rx="1" fill="#E8B44A" opacity=".8"/>
+<text class="sans" x="884" y="146" font-size="18" fill="#D8ECF7" font-weight="700" xml:space="preserve">API with a budget</text>
+<text class="sans" x="884" y="170" font-size="13" fill="#5E7E96" xml:space="preserve">O₂ is what is left of it</text>
+<rect x="880" y="190" width="340" height="56" rx="8" fill="#06121C" stroke="#1A3850"/>
+<text class="mono" x="892" y="214" font-size="12" fill="#3FE0F0" xml:space="preserve">O₂ 83% · $16.60 left   ▼ 38% ━━━━</text>
+<text class="mono" x="892" y="236" font-size="11" fill="#E8B44A" xml:space="preserve">footer: budget runs out in ~2h</text>
+<text class="sans" x="884" y="284" font-size="12" fill="#5E7E96" xml:space="preserve">/budget $20 day · /budget 5M</text>
+<text class="sans" x="884" y="304" font-size="12" fill="#5E7E96" xml:space="preserve">tokens week · /budget off</text>
+<text class="mono" x="40" y="392" font-size="12" fill="#5E7E96" xml:space="preserve">carapace tells the account type apart by itself. A company gateway shows "O₂ 71% · company budget".</text>
+</svg>

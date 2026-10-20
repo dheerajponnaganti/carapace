@@ -1,0 +1,66 @@
+# Runs on every pull request and on main and dev: the plugin validator, every mod's tests on a pinned Claude Code, and the installer test.
+# A branch push runs it once, through its pull request.
+name: check
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    # The oldest Claude Code carapace supports and the newest: an action only a newer engine knows makes an older one
+    # refuse to load the whole plugin, so both must pass.
+    strategy:
+      fail-fast: false
+      matrix:
+        claude: ['2.1.299', '2.1.300']
+    runs-on: ubuntu-latest
+    env:
+      DISABLE_AUTOUPDATER: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+
+      - name: Actions are pinned to a commit
+        run: |
+          if grep -hE '^\s*-?\s*uses:' .github/workflows/*.yml | grep -vE '@[0-9a-f]{40}( |$)'; then
+            echo "::error::Pin every action to a full commit SHA."
+            exit 1
+          fi
+
+      - name: Installer syntax
+        run: bash -n install.sh
+
+      - name: Installer test
+        run: scripts/test-install.sh
+
+      - name: Windows installer test (PowerShell)
+        run: scripts/test-install-ps1.sh
+
+      - name: Install Claude Code ${{ matrix.claude }}
+        run: npm install -g @anthropic-ai/claude-code@${{ matrix.claude }}
+
+      - name: Validate the plugin
+        run: claude plugin validate .
+
+      - name: Test every mod
+        run: claude plugin test .
+
+      # The engine writes .claude-plugin/types only when a session loads the mods, which needs a login.
+      - name: Type check
+        run: |
+          if [ -d .claude-plugin/types ]; then
+            npx -y -p typescript@5.6.3 tsc -p . --noEmit
+          else
+            echo "::warning::No .claude-plugin/types here (written by a Claude Code session); type check skipped."
+          fi

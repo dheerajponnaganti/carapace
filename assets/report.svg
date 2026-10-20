@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Work Report</title>
+  <desc id="d">A Work Report card for the week: 30 tasks done, 10.4 hours saved, $520 of value, a bar chart of tasks per day from Monday to Sunday with Thursday glowing as today, a Today, Week, Month, Year switcher, and a Timeline with a snapshot after every edit, a fixed by this note and a Restore button.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
+  </style>
+  <rect width="1280" height="560" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="560" rx="18" fill="url(#grain)"/>
+  <text class="mono" x="60" y="48" font-size="12" letter-spacing="3" fill="#5E7E96">WORK REPORT</text>
+  <text class="sans" x="60" y="84" font-size="26" font-weight="700" fill="#D8ECF7">What got done this week.</text>
+  <text class="sans" x="60" y="164" font-size="52" font-weight="700" fill="#3FE0F0" filter="url(#glow)">30</text>
+  <text class="mono" x="60" y="190" font-size="12" fill="#5E7E96">TASKS DONE</text>
+  <text class="sans" x="250" y="164" font-size="52" font-weight="700" fill="#3DDC97" filter="url(#glow)">10.4</text>
+  <text class="mono" x="250" y="190" font-size="12" fill="#5E7E96">HOURS SAVED</text>
+  <text class="sans" x="440" y="164" font-size="52" font-weight="700" fill="#E8B44A" filter="url(#glow)">$520</text>
+  <text class="mono" x="440" y="190" font-size="12" fill="#5E7E96">VALUE AT $50/HR</text>
+  <rect x="60" y="244" width="84" height="30" rx="15" fill="none" stroke="#23425A"/><text class="mono" x="102" y="263" font-size="13" text-anchor="middle" fill="#5E7E96">Today</text>
+  <rect x="154" y="244" width="84" height="30" rx="15" fill="#12283A" stroke="#3FE0F0"/><text class="mono" x="196" y="263" font-size="13" text-anchor="middle" fill="#3FE0F0">Week</text>
+  <rect x="248" y="244" width="84" height="30" rx="15" fill="none" stroke="#23425A"/><text class="mono" x="290" y="263" font-size="13" text-anchor="middle" fill="#5E7E96">Month</text>
+  <rect x="342" y="244" width="84" height="30" rx="15" fill="none" stroke="#23425A"/><text class="mono" x="384" y="263" font-size="13" text-anchor="middle" fill="#5E7E96">Year</text>
+  <rect x="640" y="110" width="1" height="180" fill="#23425A"/>
+  <text class="mono" x="700" y="130" font-size="12" letter-spacing="3" fill="#5E7E96">TASKS PER DAY</text>
+  <rect x="700" y="212" width="40" height="50" rx="6" fill="#1B8FA6"/>
+    <text class="mono" x="720" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Mon</text>
+    <text class="mono" x="720" y="204" font-size="11" text-anchor="middle" fill="#5E7E96">5</text>
+    <rect x="774" y="182" width="40" height="80" rx="6" fill="#1B8FA6"/>
+    <text class="mono" x="794" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Tue</text>
+    <text class="mono" x="794" y="174" font-size="11" text-anchor="middle" fill="#5E7E96">8</text>
+    <rect x="848" y="202" width="40" height="60" rx="6" fill="#1B8FA6"/>
+    <text class="mono" x="868" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Wed</text>
+    <text class="mono" x="868" y="194" font-size="11" text-anchor="middle" fill="#5E7E96">6</text>
+    <rect x="922" y="152" width="40" height="110" rx="6" fill="#3FE0F0" filter="url(#glow)"/>
+    <text class="mono" x="942" y="284" font-size="12" text-anchor="middle" fill="#3FE0F0">Thu</text>
+    <text class="mono" x="942" y="144" font-size="11" text-anchor="middle" fill="#3FE0F0">11</text>
+    <rect x="996" y="260" width="40" height="2" rx="1" fill="#23425A"/>
+    <text class="mono" x="1016" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Fri</text>
+    <rect x="1070" y="260" width="40" height="2" rx="1" fill="#23425A"/>
+    <text class="mono" x="1090" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Sat</text>
+    <rect x="1144" y="260" width="40" height="2" rx="1" fill="#23425A"/>
+    <text class="mono" x="1164" y="284" font-size="12" text-anchor="middle" fill="#5E7E96">Sun</text>
+    <text class="mono pulse" x="942" y="302" font-size="12" text-anchor="middle" fill="#3FE0F0">▴ now</text>
+<rect x="60" y="326" width="1160" height="1" fill="#23425A"/>
+<text class="mono" x="60" y="356" font-size="12" letter-spacing="3" fill="#5E7E96">TIMELINE</text>
+<text class="mono" x="1220" y="356" font-size="12" fill="#5E7E96" text-anchor="end">a hidden snapshot after every edit · /report snapshots on|off</text>
+<text class="mono" x="60" y="392" font-size="13" fill="#5E7E96">10:42</text>
+<circle cx="124" cy="388" r="5" fill="#FF5C7A"/>
+<text class="mono" x="144" y="392" font-size="14" fill="#D8ECF7">Edit  src/login.ts</text>
+<text class="mono" x="360" y="392" font-size="12" fill="#FF5C7A">npm test failed</text>
+<rect x="1100" y="375" width="100" height="24" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1150.0" y="392" font-size="13" fill="#D8ECF7" text-anchor="middle">Restore</text>
+<text class="mono" x="60" y="434" font-size="13" fill="#5E7E96">10:51</text>
+<circle cx="124" cy="430" r="5" fill="#3DDC97"/>
+<text class="mono" x="144" y="434" font-size="14" fill="#D8ECF7">Edit  src/login.ts</text>
+<text class="mono" x="360" y="434" font-size="12" fill="#3DDC97">npm test passed</text>
+<text class="mono" x="144" y="452" font-size="12" fill="#3DDC97">fixed by this: "npm test" failed before</text>
+<rect x="1100" y="417" width="100" height="24" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1150.0" y="434" font-size="13" fill="#D8ECF7" text-anchor="middle">Restore</text>
+<text class="mono" x="60" y="476" font-size="13" fill="#5E7E96">11:06</text>
+<circle cx="124" cy="472" r="5" fill="#5E7E96"/>
+<text class="mono" x="144" y="476" font-size="14" fill="#D8ECF7">Edit  src/app.tsx</text>
+<rect x="1100" y="459" width="100" height="24" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1150.0" y="476" font-size="13" fill="#D8ECF7" text-anchor="middle">Restore</text>
+<text class="mono" x="60" y="540" font-size="12" fill="#5E7E96">Restore changes files only. To rewind the conversation, use /rewind.</text>
+</svg>

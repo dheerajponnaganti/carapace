@@ -1,0 +1,12 @@
+{
+  "name": "carapace",
+  "version": "0.1.0-beta.1",
+  "description": "A shell for Claude Code: a plain checklist of what Claude is doing, helpers that split big jobs, guards for secrets and packages, memory between sessions, and a report of the time saved.",
+  "author": {
+    "name": "Dheeraj Ponnaganti"
+  },
+  "homepage": "https://github.com/dheerajponnaganti/carapace",
+  "repository": "https://github.com/dheerajponnaganti/carapace",
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

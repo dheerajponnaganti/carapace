@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 548" width="1280" height="548" role="img" aria-labelledby="t d">
+  <title id="t">Setup at first run</title>
+  <desc id="d">The first time Claude Code starts, carapace asks a few questions in a pane: every tool call or a checklist of steps, what you use Claude for, memory, how you pay, what matters for helpers, and what an hour of your time is worth. Each answer goes straight into the feature that uses it.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+  </style>
+  <rect width="1280" height="548" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="548" rx="18" fill="url(#grain)"/>
+  <text class="mono" x="40" y="46" font-size="12" fill="#5E7E96" letter-spacing="3">FIRST RUN</text>
+  <text class="sans" x="40" y="82" font-size="28" fill="#D8ECF7" font-weight="700">A few questions, and it is yours</text>
+  <rect x="40" y="104" width="760" height="414" rx="14" fill="#0B1B2A" stroke="#23425A"/>
+  <text class="mono" x="64" y="138" font-size="15" fill="#D8ECF7"><tspan fill="#E8B44A">◎ </tspan><tspan fill="#3FE0F0" font-weight="700">S E T U P</tspan></text>
+  <rect x="64" y="150" width="712" height="1" fill="#23425A"/>
+  <text class="mono" x="64" y="438" font-size="11" fill="#5E7E96" letter-spacing="1">WHAT IS AN HOUR OF YOUR TIME WORTH?</text>
+  <rect x="64" y="448" width="80" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="74" y="464" font-size="13" fill="#03101A" font-weight="700">$ 85</text>
+  <text class="mono" x="64" y="230" font-size="11" fill="#5E7E96" letter-spacing="1">WHAT DO YOU MOSTLY USE CLAUDE FOR?</text>
+  <rect x="64" y="240" width="96" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="74" y="256" font-size="13" fill="#03101A" font-weight="700">Coding</text>
+  <rect x="168" y="240" width="104" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="178" y="256" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Writing</text>
+  <rect x="280" y="240" width="96" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="290" y="256" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Emails</text>
+  <rect x="384" y="240" width="112" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="394" y="256" font-size="13" fill="#03101A" font-weight="700">Research</text>
+  <rect x="504" y="240" width="88" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="514" y="256" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Media</text>
+  <text class="mono" x="64" y="334" font-size="11" fill="#5E7E96" letter-spacing="1">HOW DO YOU PAY FOR CLAUDE?</text>
+  <rect x="64" y="344" width="144" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="74" y="360" font-size="13" fill="#03101A" font-weight="700">Subscription</text>
+  <rect x="216" y="344" width="136" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="226" y="360" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>API credits</text>
+  <rect x="360" y="344" width="185" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="370" y="360" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>API with a budget</text>
+  <text class="mono" x="64" y="386" font-size="11" fill="#5E7E96" letter-spacing="1">WHEN CLAUDE SPLITS WORK, WHAT MATTERS MORE?</text>
+  <rect x="64" y="396" width="136" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="74" y="412" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Lowest cost</text>
+  <rect x="208" y="396" width="112" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="218" y="412" font-size="13" fill="#03101A" font-weight="700">Balanced</text>
+  <rect x="328" y="396" width="144" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="338" y="412" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Best quality</text>
+  <text class="mono" x="64" y="178" font-size="11" fill="#5E7E96" letter-spacing="1">WHAT DO YOU WANT TO SEE?</text>
+  <rect x="64" y="188" width="128" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="74" y="204" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>Every tool call</text>
+  <rect x="200" y="188" width="193" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="210" y="204" font-size="13" fill="#03101A" font-weight="700">A checklist of steps</text>
+  <text class="mono" x="64" y="282" font-size="11" fill="#5E7E96" letter-spacing="1">REMEMBER YOUR WORK BETWEEN SESSIONS?</text>
+  <rect x="64" y="292" width="72" height="24" rx="5" fill="#3FE0F0"/>
+  <text class="mono" x="74" y="308" font-size="13" fill="#03101A" font-weight="700">Yes</text>
+  <rect x="144" y="292" width="64" height="24" rx="5" fill="#12283A"/>
+  <text class="mono" x="154" y="308" font-size="13" fill="#D8ECF7"><tspan fill="#5E7E96"> </tspan>No</text>
+  <text class="mono" x="840" y="138" font-size="12" fill="#5E7E96" letter-spacing="2">EACH ANSWER LANDS IN</text>
+  <line x1="800" y1="440" x2="836" y2="440" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="420" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="444" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Work Report values your time</text>
+  <line x1="800" y1="232" x2="836" y2="232" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="212" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="236" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Bar buttons picked for you</text>
+  <line x1="800" y1="336" x2="836" y2="336" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="316" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="340" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Plan limit or spend gauge</text>
+  <line x1="800" y1="388" x2="836" y2="388" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="368" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="392" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Helper model per task</text>
+  <line x1="800" y1="180" x2="836" y2="180" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="160" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="184" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Clean View on or off</text>
+  <line x1="800" y1="284" x2="836" y2="284" stroke="#3FE0F0" stroke-dasharray="4 5" opacity="0.7"/>
+  <rect x="840" y="264" width="400" height="36" rx="8" fill="#12283A" stroke="#23425A"/>
+  <text class="sans" x="858" y="288" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">→ </tspan>Logbook set up</text>
+  <text class="sans" x="840" y="508" font-size="14" fill="#5E7E96">Change any answer later with /setup.</text>
+</svg>

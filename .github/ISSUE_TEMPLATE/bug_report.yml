@@ -1,0 +1,32 @@
+name: Bug report
+description: Something in carapace does not work. The ⚑ Problem button in Claude Code fills this in for you.
+labels: ["bug report"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What went wrong?
+      description: Say it in a sentence or two. What did you do, what did you expect, what happened?
+    validations:
+      required: true
+  - type: input
+    id: carapace
+    attributes:
+      label: carapace version
+      description: The Shipyard (/mods) shows it, or run `git -C ~/carapace describe --tags`.
+  - type: input
+    id: claude
+    attributes:
+      label: Claude Code version
+      description: Run `claude --version`.
+  - type: input
+    id: os
+    attributes:
+      label: OS and terminal
+      placeholder: macOS 15, Terminal
+  - type: textarea
+    id: log
+    attributes:
+      label: Error lines
+      description: The last lines of `~/.claude/carapace/log.txt`, if any. It holds errors only, never your prompts or files.
+      render: text

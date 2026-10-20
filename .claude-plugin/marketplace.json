@@ -1,0 +1,16 @@
+{
+  "name": "carapace",
+  "owner": {
+    "name": "Dheeraj Ponnaganti"
+  },
+  "metadata": {
+    "description": "carapace, a shell for Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "carapace",
+      "source": "./",
+      "description": "A shell for Claude Code: a plain checklist of what Claude is doing, helpers that split big jobs, guards for secrets and packages, memory between sessions, and a report of the time saved."
+    }
+  ]
+}

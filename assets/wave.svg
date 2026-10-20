@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 40" width="1280" height="40" role="img" aria-labelledby="t">
+  <title id="t">Wave divider</title>
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3FE0F0" stop-opacity="0"/><stop offset="0.5" stop-color="#3FE0F0" stop-opacity="0.8"/><stop offset="1" stop-color="#3FE0F0" stop-opacity="0"/></linearGradient>
+    <filter id="glow" x="-5%" y="-100%" width="110%" height="300%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .drift { animation: drift 12s linear infinite; }
+    .bub { animation: blink 3s ease-in-out infinite; } .b2 { animation-delay: -1s; } .b3 { animation-delay: -2s; }
+    @keyframes drift { to { transform: translateX(-320px); } }
+    @keyframes blink { 0%, 100% { opacity: .8; } 50% { opacity: .25; } }
+    @media (prefers-reduced-motion: reduce) { .drift, .bub { animation: none; } }
+  </style>
+  <mask id="m"><rect width="1280" height="40" fill="url(#fade)"/></mask>
+  <g mask="url(#m)">
+    <path class="drift" filter="url(#glow)" fill="none" stroke="#3FE0F0" stroke-width="2" d="M-320 20 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+  </g>
+  <g fill="none" stroke="#3FE0F0" stroke-opacity="0.7">
+    <circle class="bub" cx="420" cy="9" r="2.5"/><circle class="bub b2" cx="640" cy="7" r="3.5"/><circle class="bub b3" cx="880" cy="10" r="2"/><circle class="bub b2" cx="560" cy="32" r="2"/><circle class="bub" cx="760" cy="33" r="2.5"/>
+  </g>
+</svg>

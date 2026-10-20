@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" width="1280" height="820" role="img" aria-labelledby="t d">
+  <title id="t">Claude Code with carapace</title>
+  <desc id="d">A Claude Code window: the reply, the spinner, then the carapace bar with the job title, plan limit and context gauges, a checklist with a depth ruler and progress, a stuck row with Stop, the five buttons (Crew, Refine, Clean, Logbook, Report) and Shipyard, and the footer with model, effort, branch and the cache countdown.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+  </style>
+  <rect width="1280" height="820" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="820" rx="18" fill="url(#grain)"/>
+  <rect x="24" y="24" width="1232" height="772" rx="16" fill="#06121C" stroke="#23425A"/>
+  <rect x="24" y="24" width="1232" height="40" rx="16" fill="#12283A"/><rect x="24" y="48" width="1232" height="16" fill="#12283A"/>
+  <circle cx="52" cy="44" r="7" fill="#FF5F57"/>
+  <circle cx="74" cy="44" r="7" fill="#FEBC2E"/>
+  <circle cx="96" cy="44" r="7" fill="#28C840"/>
+  <text class="mono" x="640.0" y="49" font-size="13" fill="#5E7E96" text-anchor="middle">claude</text>
+  <text class="mono" x="60" y="112" font-size="16" fill="#D8ECF7"><tspan fill="#5E7E96">› </tspan>Fix the login redirect and add a test</text>
+  <text class="mono" x="60" y="150" font-size="16" fill="#D8ECF7"><tspan fill="#D8ECF7">● </tspan>I will look at how login is handled, then change the redirect.</text>
+  <rect x="84" y="168" width="520" height="10" rx="5" fill="#12283A"/>
+  <rect x="84" y="190" width="450" height="10" rx="5" fill="#12283A"/>
+  <rect x="84" y="212" width="360" height="10" rx="5" fill="#12283A"/>
+  <text class="mono" x="60" y="270" font-size="15" fill="#D8ECF7"><tspan fill="#3FE0F0">◎ Diving…</tspan><tspan fill="#5E7E96">  (24s · 6.2k tokens)</tspan></text>
+  <rect x="48" y="300" width="1184" height="340" rx="12" fill="#0B1B2A" stroke="#23425A"/>
+  <text class="mono" x="70" y="334" font-size="16" fill="#D8ECF7"><tspan fill="#3FE0F0">◇ </tspan><tspan fill="#3FE0F0" font-weight="700">Fix the login redirect</tspan><tspan fill="#5E7E96">  · 24:10</tspan></text>
+  <text class="mono" x="1210" y="334" font-size="15" fill="#D8ECF7" text-anchor="end"><tspan fill="#3DDC97">O₂ 62% ↻ 4:20pm</tspan><tspan fill="#D8ECF7">   ▼ 38% shallow </tspan></text>
+  <rect x="1210" y="0" width="0" height="0"/>
+  <text class="mono" x="70" y="362" font-size="15" fill="#D8ECF7"><tspan fill="#1B8FA6">▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃▂▂▂▃▃▃▂▃▃▃</tspan></text>
+  <text class="mono" x="70" y="396" font-size="15" fill="#D8ECF7"><tspan fill="#5E7E96"> 0 m </tspan><tspan fill="#23425A">─┬─ </tspan><tspan fill="#3DDC97">✓ </tspan><tspan fill="#5E7E96">Find where login is handled</tspan></text>
+  <rect x="760" y="387" width="220" height="6" rx="3" fill="#12283A"/>
+  <rect x="760" y="387" width="220" height="6" rx="3" fill="#3DDC97"/>
+  <text class="mono" x="1000" y="396" font-size="14" fill="#3DDC97">Done</text>
+  <text class="mono" x="70" y="426" font-size="15" fill="#D8ECF7"><tspan fill="#5E7E96">12 m </tspan><tspan fill="#23425A"> ├─ </tspan><tspan fill="#3DDC97">✓ </tspan><tspan fill="#5E7E96">Read the settings page</tspan></text>
+  <rect x="760" y="417" width="220" height="6" rx="3" fill="#12283A"/>
+  <rect x="760" y="417" width="220" height="6" rx="3" fill="#3DDC97"/>
+  <text class="mono" x="1000" y="426" font-size="14" fill="#3DDC97">Done</text>
+  <text class="mono" x="70" y="456" font-size="15" fill="#D8ECF7"><tspan fill="#5E7E96">24 m </tspan><tspan fill="#23425A"> ├─ </tspan><tspan fill="#3FE0F0">▸ </tspan><tspan fill="#3FE0F0" font-weight="700">Fix the login redirect</tspan></text>
+  <rect x="760" y="447" width="220" height="6" rx="3" fill="#12283A"/>
+  <rect x="760" y="447" width="160" height="6" rx="3" fill="#3FE0F0"/>
+  <text class="mono" x="1000" y="456" font-size="14" fill="#3FE0F0">73%</text>
+  <text class="mono" x="70" y="486" font-size="15" fill="#D8ECF7"><tspan fill="#5E7E96">36 m </tspan><tspan fill="#23425A"> ├─ </tspan><tspan fill="#5E7E96">○ </tspan><tspan fill="#5E7E96">Run the tests</tspan></text>
+  <rect x="760" y="477" width="220" height="6" rx="3" fill="#12283A"/>
+  <text class="mono" x="1000" y="486" font-size="14" fill="#5E7E96">Next</text>
+  <text class="mono" x="70" y="516" font-size="15" fill="#D8ECF7"><tspan fill="#5E7E96">48 m </tspan><tspan fill="#23425A"> └─ </tspan><tspan fill="#5E7E96">○ </tspan><tspan fill="#5E7E96">Write a short summary</tspan></text>
+  <rect x="760" y="507" width="220" height="6" rx="3" fill="#12283A"/>
+  <text class="mono" x="70" y="560" font-size="14" fill="#D8ECF7"><tspan fill="#FF5C7A">✕ stuck: 4 tries on the same error · npm test</tspan></text>
+  <rect x="520" y="545" width="64" height="22" rx="5" fill="#E8B44A"/>
+  <text class="mono" x="552" y="561" font-size="13" fill="#03101A" font-weight="700" text-anchor="middle">Stop</text>
+  <text class="mono" x="600" y="561" font-size="13" fill="#5E7E96">[ Dismiss ]</text>
+  <rect x="70" y="591" width="101" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="80" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#FF5FD2">◆ </tspan>Crew<tspan fill="#3FE0F0" font-weight="700"> 2</tspan></text>
+  <rect x="181" y="591" width="101" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="191" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#E8B44A">✦ </tspan>Refine</text>
+  <rect x="292" y="591" width="128" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="302" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#3DDC97">● </tspan>Clean: on</text>
+  <rect x="430" y="591" width="136" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="440" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#3FE0F0">▥ </tspan>Logbook<tspan fill="#3FE0F0" font-weight="700"> 12</tspan></text>
+  <rect x="576" y="591" width="118" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="586" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#3FE0F0">▤ </tspan>Report<tspan fill="#3FE0F0" font-weight="700"> 4</tspan></text>
+  <rect x="704" y="591" width="118" height="25" rx="5" fill="#12283A"/>
+  <text class="mono" x="714" y="608" font-size="14" fill="#D8ECF7"><tspan fill="#3FE0F0">⌬ </tspan>Shipyard</text>
+  <rect x="48" y="660" width="1184" height="1" fill="#23425A"/>
+  <text class="mono" x="60" y="696" font-size="18" fill="#D8ECF7"><tspan fill="#5E7E96">›</tspan> <tspan fill="#3FE0F0">▍</tspan></text>
+  <rect x="48" y="716" width="1184" height="1" fill="#23425A"/>
+  <text class="mono" x="60" y="750" font-size="14" fill="#D8ECF7"><tspan fill="#E8B44A">▸▸ auto mode on</tspan><tspan fill="#5E7E96"> · ← for agents</tspan></text>
+  <text class="mono" x="1220" y="750" font-size="14" fill="#D8ECF7" text-anchor="end"><tspan fill="#3FE0F0">◈ </tspan>Opus 5.5 <tspan fill="#8EA7FF">▰▰▰▱▱</tspan><tspan fill="#5E7E96"> high</tspan>   <tspan fill="#3DDC97">⚓ </tspan>main<tspan fill="#E8B44A"> ±3</tspan><tspan fill="#3FE0F0">   cache 42m</tspan></text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 500" width="1280" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Clean View, before and after</title>
+  <desc id="d">Left, a cluttered terminal transcript of raw tool rows. Right, the Clean View checklist: plain-English steps, finished ones ticked, the current one glowing with a meter and percent, and upcoming ones muted. Below it, the bar: session badge, O2 and depth gauges, a stuck row with Stop and Dismiss, and the Crew, Refine, Clean and Shipyard buttons.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3FE0F0" stop-opacity="0"/><stop offset="1" stop-color="#3FE0F0" stop-opacity="0.55"/></linearGradient>
+    <radialGradient id="ping" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#3FE0F0" stop-opacity="0.22"/><stop offset="1" stop-color="#3FE0F0" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    .pulse{animation:pulse 2s ease-in-out infinite}.flow{animation:flow 2s linear infinite}.meter{animation:fill 4s ease-in-out infinite alternate}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}@keyframes flow{to{stroke-dashoffset:-16}}@keyframes fill{from{width:60px}to{width:72px}}
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1280" height="500" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="500" rx="18" fill="url(#grain)"/>
+  <text class="mono" x="40" y="46" font-size="13" letter-spacing="3" fill="#5E7E96">CLEAN VIEW</text>
+  <text class="sans" x="40" y="80" font-size="24" font-weight="700" fill="#D8ECF7">Tool noise out, plain steps in</text>
+  <rect x="40" y="104" width="540" height="224" rx="12" fill="#0B1B2A" stroke="#17324A"/>
+  <text class="mono" x="60" y="128" font-size="11" letter-spacing="2" fill="#5E7E96">BEFORE</text>
+  <g class="mono" font-size="13" fill="#5E7E96">
+    <text x="60" y="152" fill="#8FB3C7" opacity="0.8" xml:space="preserve">⏺ Bash(git status --porcelain)</text>
+    <text x="60" y="171" fill="#5E7E96" opacity="0.8" xml:space="preserve">  ⎿  14 lines</text>
+    <text x="60" y="190" fill="#8FB3C7" opacity="0.8" xml:space="preserve">⏺ Read(src/app.tsx)</text>
+    <text x="60" y="209" fill="#5E7E96" opacity="0.8" xml:space="preserve">  ⎿  Read 212 lines</text>
+    <text x="60" y="228" fill="#8FB3C7" opacity="0.8" xml:space="preserve">⏺ Edit(src/app.tsx)</text>
+    <text x="60" y="247" fill="#FF5C7A" opacity="0.8" xml:space="preserve">  ⎿  - const [open, setOpen] = useState()</text>
+    <text x="60" y="266" fill="#3DDC97" opacity="0.8" xml:space="preserve">  ⎿  + const [open, setOpen] = useState(false)</text>
+    <text x="60" y="285" fill="#8FB3C7" opacity="0.8" xml:space="preserve">⏺ Bash(npm test -- --run)</text>
+    <text x="60" y="304" fill="#5E7E96" opacity="0.8" xml:space="preserve">  ⎿  Tests  41 passed (41)</text>
+  </g>
+  <g fill="none" stroke="#3FE0F0" stroke-width="2" stroke-linecap="round">
+    <line class="flow" x1="604" y1="216" x2="696" y2="216" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+    <path d="M688 208 L698 216 L688 224" stroke-opacity="0.9"/>
+  </g>
+  <rect x="716" y="104" width="524" height="224" rx="12" fill="#0B1B2A" stroke="#1B8FA6"/>
+  <text class="mono" x="736" y="128" font-size="11" letter-spacing="2" fill="#3FE0F0">WITH CLEAN VIEW</text>
+  <g class="mono" font-size="14">
+    <text x="736" y="160" fill="#5E7E96">  0 m</text><text x="800" y="160" fill="#23425A">┬─</text><text x="830" y="160" fill="#3DDC97">✓</text><text x="852" y="160" fill="#D8ECF7">Find where login is handled</text>
+    <text x="736" y="188" fill="#5E7E96"> 12 m</text><text x="800" y="188" fill="#23425A">├─</text><text x="830" y="188" fill="#3DDC97">✓</text><text x="852" y="188" fill="#D8ECF7">Read the settings page</text>
+    <text x="852" y="208" font-size="12" fill="#5E7E96">⎿ </text><text x="878" y="208" font-size="12" fill="#3FE0F0">◎ 0.2s</text>
+    <text x="736" y="236" fill="#5E7E96"> 24 m</text><text x="800" y="236" fill="#23425A">├─</text>
+    <g class="pulse"><text x="830" y="236" fill="#3FE0F0" filter="url(#glow)">●</text></g>
+    <text x="852" y="236" fill="#3FE0F0" font-weight="700">Fix the login redirect</text>
+    <rect x="1060" y="226" width="80" height="6" rx="3" fill="#12283A"/>
+    <rect class="meter" x="1060" y="226" width="64" height="6" rx="3" fill="#3FE0F0" filter="url(#glow)"/>
+    <text x="1152" y="236" font-size="13" fill="#D8ECF7">80%</text>
+    <text x="736" y="268" fill="#5E7E96"> 36 m</text><text x="800" y="268" fill="#23425A">├─</text><text x="830" y="268" fill="#5E7E96">○</text><text x="852" y="268" fill="#5E7E96">Run the tests</text>
+    <text x="736" y="298" fill="#5E7E96"> 48 m</text><text x="800" y="298" fill="#23425A">└─</text><text x="830" y="298" fill="#5E7E96">○</text><text x="852" y="298" fill="#5E7E96">Write a short summary</text>
+  </g>
+<rect x="40" y="352" width="1200" height="128" rx="12" fill="#0B1B2A" stroke="#17324A"/>
+<text class="mono" x="60" y="374" font-size="11" fill="#5E7E96">THE BAR</text>
+<text class="mono" x="60" y="398" font-size="14"><tspan fill="#3FE0F0" font-weight="700">◇ Fix the login redirect</tspan><tspan fill="#5E7E96"> · 24:10</tspan></text>
+<text class="mono" x="820" y="398" font-size="14"><tspan fill="#3DDC97">O₂ 62% ↻ 4:20pm</tspan><tspan fill="#D8ECF7">   ▼ 38% shallow </tspan><tspan fill="#3FE0F0">━━━━━━</tspan><tspan fill="#23425A">──────</tspan></text>
+<text class="mono" x="60" y="424" font-size="14" fill="#FF5C7A" font-weight="700">✕</text>
+<text class="mono" x="80" y="424" font-size="13" fill="#FF5C7A">stuck: 4 tries on the same error · npm test</text>
+<rect x="900" y="408" width="56" height="22" rx="3" fill="#E8B44A"/>
+<text class="mono" x="928" y="424" font-size="13" fill="#06121C" text-anchor="middle" font-weight="700">Stop</text>
+<text class="mono" x="980" y="424" font-size="13" fill="#5E7E96">[ Dismiss ]</text>
+<text class="mono" x="60" y="455" font-size="14" font-weight="700" fill="#FF5FD2">◆</text>
+<rect x="82" y="440" width="86" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="90" y="455" font-size="13" fill="#FF5FD2">◆</text>
+<text class="mono" x="108" y="455" font-size="13" fill="#D8ECF7">Crew 2</text>
+<rect x="176" y="440" width="92" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="184" y="455" font-size="13" fill="#E8B44A">✦</text>
+<text class="mono" x="202" y="455" font-size="13" fill="#D8ECF7">Refine</text>
+<rect x="276" y="440" width="120" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="284" y="455" font-size="13" fill="#3DDC97">●</text>
+<text class="mono" x="302" y="455" font-size="13" fill="#D8ECF7">Clean: on</text>
+<rect x="404" y="440" width="112" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="412" y="455" font-size="13" fill="#3FE0F0">⌬</text>
+<text class="mono" x="430" y="455" font-size="13" fill="#D8ECF7">Shipyard</text>
+</svg>

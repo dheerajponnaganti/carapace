@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1600" viewBox="0 0 2560 1600">
+<!-- carapace Terminal background, Deep Sea. Source of the PNG; render with headless Chrome at 2560x1600. -->
+<defs>
+  <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#12304A"/>
+    <stop offset="1" stop-color="#040C14"/>
+  </linearGradient>
+</defs>
+<rect width="2560" height="1600" fill="url(#sea)"/>
+<g>
+  <circle cx="2560" cy="1600" r="180" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="320" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="460" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="600" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="740" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="880" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="1020" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="1160" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+  <circle cx="2560" cy="1600" r="1300" fill="none" stroke="#3FE0F0" stroke-opacity="0.05" stroke-width="2"/>
+</g>
+
+</svg>

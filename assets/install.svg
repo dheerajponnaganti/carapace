@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-labelledby="t d">
+  <title id="t">One command in, one command out</title>
+  <desc id="d">Install with one command; update from the bar; uninstall with one command that puts your settings back. Next to it, everything the shell does for you that you would otherwise do by hand.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+  </style>
+  <rect width="1280" height="560" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="560" rx="18" fill="url(#grain)"/>
+  <text class="mono" x="40" y="46" font-size="12" fill="#5E7E96" letter-spacing="3">INSTALL · UPDATE · UNINSTALL</text>
+  <text class="sans" x="40" y="82" font-size="28" fill="#D8ECF7" font-weight="700">One command in. One command out.</text>
+  <rect x="40" y="110" width="380" height="170" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="40" y="110" width="380" height="4" rx="2" fill="#3FE0F0"/>
+  <circle cx="70" cy="146" r="14" fill="#12283A" stroke="#3FE0F0"/>
+  <text class="mono" x="70" y="151" font-size="14" fill="#3FE0F0" font-weight="700" text-anchor="middle">1</text>
+  <text class="sans" x="94" y="152" font-size="20" fill="#D8ECF7" font-weight="700">Install</text>
+  <rect x="60" y="174" width="340" height="28" rx="6" fill="#06121C"/>
+  <text class="mono" x="72" y="193" font-size="14" fill="#D8ECF7"><tspan fill="#3FE0F0">$ </tspan>git clone …/carapace ~/carapace</text>
+  <rect x="60" y="208" width="340" height="28" rx="6" fill="#06121C"/>
+  <text class="mono" x="72" y="227" font-size="14" fill="#D8ECF7"><tspan fill="#3FE0F0">$ </tspan>~/carapace/install.sh</text>
+  <text class="sans" x="60" y="266" font-size="13" fill="#5E7E96">Everything set up. Open Claude Code.</text>
+  <rect x="440" y="110" width="380" height="170" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="440" y="110" width="380" height="4" rx="2" fill="#3DDC97"/>
+  <circle cx="470" cy="146" r="14" fill="#12283A" stroke="#3DDC97"/>
+  <text class="mono" x="470" y="151" font-size="14" fill="#3DDC97" font-weight="700" text-anchor="middle">2</text>
+  <text class="sans" x="494" y="152" font-size="20" fill="#D8ECF7" font-weight="700">Update</text>
+  <rect x="460" y="174" width="340" height="28" rx="6" fill="#06121C"/>
+  <text class="mono" x="472" y="193" font-size="14" fill="#D8ECF7"><tspan fill="#3DDC97"></tspan>↑ Update  on the bar</text>
+  <rect x="460" y="208" width="340" height="28" rx="6" fill="#06121C"/>
+  <text class="mono" x="472" y="227" font-size="14" fill="#D8ECF7"><tspan fill="#3DDC97"></tspan>/mods update</text>
+  <text class="sans" x="460" y="266" font-size="13" fill="#5E7E96">Pulls the new version. Mods reload.</text>
+  <rect x="840" y="110" width="380" height="170" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <rect x="840" y="110" width="380" height="4" rx="2" fill="#FF5FD2"/>
+  <circle cx="870" cy="146" r="14" fill="#12283A" stroke="#FF5FD2"/>
+  <text class="mono" x="870" y="151" font-size="14" fill="#FF5FD2" font-weight="700" text-anchor="middle">3</text>
+  <text class="sans" x="894" y="152" font-size="20" fill="#D8ECF7" font-weight="700">Uninstall</text>
+  <rect x="860" y="174" width="340" height="28" rx="6" fill="#06121C"/>
+  <text class="mono" x="872" y="193" font-size="14" fill="#D8ECF7"><tspan fill="#FF5FD2">$ </tspan>~/carapace/install.sh --uninstall</text>
+  <text class="sans" x="860" y="266" font-size="13" fill="#5E7E96">Removes what it added. Keeps the rest.</text>
+  <rect x="40" y="304" width="1200" height="228" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+  <text class="mono" x="64" y="336" font-size="12" fill="#5E7E96" letter-spacing="2">WHAT THE SHELL DOES FOR YOU</text>
+  <text class="sans" x="64" y="372" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Registers the plugin so every session loads it</text>
+  <text class="sans" x="654" y="372" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Installs the Deep Sea theme for Claude Code</text>
+  <text class="sans" x="64" y="410" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Dresses Terminal or Windows Terminal to match</text>
+  <text class="sans" x="654" y="410" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Adds the status line the footer reads</text>
+  <text class="sans" x="64" y="448" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Raises the helper limit so the Crew can run 20</text>
+  <text class="sans" x="654" y="448" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Adds ponytail and any add-ons you ask for</text>
+  <text class="sans" x="64" y="486" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Checks for updates and updates with one button</text>
+  <text class="sans" x="654" y="486" font-size="15" fill="#D8ECF7"><tspan fill="#3DDC97">✓ </tspan>Removes all of it, and only what it added</text>
+  <text class="sans" x="64" y="520" font-size="13" fill="#5E7E96">Without it: /plugin install, then settings.json edits, theme files, terminal profiles and add-ons by hand, and the same again to remove them.</text>
+</svg>

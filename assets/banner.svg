@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-labelledby="t d">
+  <title id="t">carapace</title>
+  <desc id="d">carapace, a shell for Claude Code: the wordmark glowing over deep water, a sonar sweep and rising bubbles.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1B2A"/>
+      <stop offset="0.55" stop-color="#06121C"/>
+      <stop offset="1" stop-color="#030B12"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.28" cy="0" r="0.9">
+      <stop offset="0" stop-color="#3FE0F0" stop-opacity="0.18"/>
+      <stop offset="0.6" stop-color="#3FE0F0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ping" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3FE0F0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#3FE0F0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3FE0F0" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3FE0F0" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="2.5"/></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/>
+    </pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sweep { transform-origin: 1010px 210px; animation: spin 6s linear infinite; }
+    .bubble { animation: rise 9s linear infinite; opacity: 0; }
+    .b2 { animation-delay: -2s; } .b3 { animation-delay: -4.5s; } .b4 { animation-delay: -6s; } .b5 { animation-delay: -7.5s; } .b6 { animation-delay: -3.2s; }
+    .blip { animation: blink 2s ease-in-out infinite; } .k2 { animation-delay: -0.7s; } .k3 { animation-delay: -1.3s; }
+    .breathe { animation: breathe 2s steps(2, jump-none) infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: .8; } 85% { opacity: .5; } 100% { transform: translateY(-330px); opacity: 0; } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+    @keyframes breathe { 0% { fill: #3FE0F0; } 100% { fill: #A9F4FA; } }
+    @media (prefers-reduced-motion: reduce) { .sweep, .bubble, .blip, .breathe { animation: none; } .bubble { opacity: .5; } }
+  </style>
+
+  <rect width="1280" height="420" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="420" rx="18" fill="url(#light)"/>
+  <rect width="1280" height="420" rx="18" fill="url(#grain)"/>
+
+  <!-- sonar, right side -->
+  <g opacity="0.95">
+    <circle cx="1010" cy="210" r="170" fill="url(#ping)"/>
+    <g fill="none" stroke="#1B8FA6" stroke-opacity="0.45">
+      <circle cx="1010" cy="210" r="56"/><circle cx="1010" cy="210" r="112"/><circle cx="1010" cy="210" r="168" stroke-dasharray="2 6"/>
+      <line x1="842" y1="210" x2="1178" y2="210" stroke-opacity="0.2"/><line x1="1010" y1="42" x2="1010" y2="378" stroke-opacity="0.2"/>
+    </g>
+    <g class="sweep">
+      <path d="M1010 210 L1178 210 A168 168 0 0 0 1155 125 Z" fill="url(#beam)" opacity="0.35"/>
+      <line x1="1010" y1="210" x2="1178" y2="210" stroke="#3FE0F0" stroke-width="1.5" opacity="0.8"/>
+    </g>
+    <circle cx="1010" cy="210" r="5" fill="#3DDC97"/>
+    <circle class="blip" cx="1072" cy="150" r="5" fill="#3FE0F0" filter="url(#soft)"/><circle class="blip" cx="1072" cy="150" r="3" fill="#3FE0F0"/>
+    <circle class="blip k2" cx="930" cy="250" r="5" fill="#3FE0F0" filter="url(#soft)"/><circle class="blip k2" cx="930" cy="250" r="3" fill="#3FE0F0"/>
+    <circle class="blip k3" cx="1120" cy="290" r="5" fill="#FF5FD2" filter="url(#soft)"/><circle class="blip k3" cx="1120" cy="290" r="3" fill="#FF5FD2"/>
+    <circle cx="975" cy="120" r="3" fill="#E8B44A"/>
+    <text class="mono" x="1080" y="146" font-size="11" fill="#5E7E96">H</text>
+    <text class="mono" x="938" y="246" font-size="11" fill="#5E7E96">S</text>
+    <text class="mono" x="1128" y="286" font-size="11" fill="#5E7E96">O</text>
+  </g>
+
+  <!-- bubbles -->
+  <g fill="none" stroke="#3FE0F0" stroke-opacity="0.7">
+    <circle class="bubble" cx="640" cy="400" r="4"/>
+    <circle class="bubble b2" cx="700" cy="410" r="2.5"/>
+    <circle class="bubble b3" cx="760" cy="405" r="5"/>
+    <circle class="bubble b4" cx="590" cy="415" r="2"/>
+    <circle class="bubble b5" cx="820" cy="400" r="3"/>
+    <circle class="bubble b6" cx="540" cy="410" r="3.5"/>
+  </g>
+
+  <!-- wordmark with the halo -->
+  <g class="mono">
+    <text x="84" y="96" font-size="15" letter-spacing="5" fill="#1B8FA6">A SHELL FOR CLAUDE CODE</text>
+    <text x="80" y="208" font-size="104" font-weight="700" letter-spacing="-2" fill="#3FE0F0" filter="url(#glow)" opacity="0.55">carapace</text>
+    <text x="80" y="208" font-size="104" font-weight="700" letter-spacing="-2" fill="#D8ECF7">carapace</text>
+    <rect x="84" y="232" width="190" height="4" rx="2" fill="#3FE0F0"/>
+    <rect x="278" y="232" width="18" height="4" rx="2" fill="#0F4B5C"/>
+    <rect x="300" y="232" width="18" height="4" rx="2" fill="#0A3341"/>
+    <text x="84" y="278" font-size="19" fill="#8FB3C7">Mods that turn the terminal into an instrument panel.</text>
+  </g>
+
+  <!-- the bar, as it sits above the prompt -->
+  <g class="mono" font-size="15">
+    <rect x="84" y="314" width="560" height="64" rx="8" fill="#0B1B2A" stroke="#17324A"/>
+    <text x="100" y="338"><tspan class="breathe" fill="#3FE0F0" font-weight="700">◇</tspan><tspan fill="#3FE0F0" font-weight="700"> carapace</tspan><tspan fill="#5E7E96"> · Ready</tspan></text>
+    <text x="470" y="338" fill="#D8ECF7">▼ 38%<tspan fill="#3FE0F0"> ━━━</tspan><tspan fill="#23425A">━━━━</tspan></text>
+    <g>
+      <rect x="98" y="349" width="92" height="20" rx="3" fill="#12283A"/><text x="106" y="364"><tspan fill="#FF5FD2">◆</tspan><tspan fill="#D8ECF7"> Crew</tspan><tspan fill="#3FE0F0" font-weight="700"> 3</tspan></text>
+      <rect x="198" y="349" width="110" height="20" rx="3" fill="#12283A"/><text x="206" y="364"><tspan fill="#3FE0F0">▤</tspan><tspan fill="#D8ECF7"> Report</tspan><tspan fill="#3FE0F0" font-weight="700"> 4</tspan></text>
+      <rect x="316" y="349" width="94" height="20" rx="3" fill="#12283A"/><text x="324" y="364"><tspan fill="#E8B44A">✦</tspan><tspan fill="#D8ECF7"> Refine</tspan></text>
+      <rect x="418" y="349" width="118" height="20" rx="3" fill="#12283A"/><text x="426" y="364"><tspan fill="#3DDC97">●</tspan><tspan fill="#D8ECF7"> Clean: on</tspan></text>
+    </g>
+  </g>
+</svg>

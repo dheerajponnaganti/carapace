@@ -1,0 +1,6 @@
+# Blank issues stay on: the ⚑ Problem button opens a prefilled blank issue.
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security problem
+    url: https://github.com/dheerajponnaganti/carapace/security/advisories/new
+    about: Report it privately. See SECURITY.md.

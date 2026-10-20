@@ -1,0 +1,9 @@
+.DS_Store
+# written by Claude Code at every load
+.claude-plugin/types
+node_modules/
+.claude/*
+# the rules every change follows travel with the repo
+!.claude/CLAUDE.md
+# the knowledge base is a private Obsidian vault, never in the repo
+knowledge/

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 250" width="1280" height="250" role="img" aria-labelledby="t d">
+  <title id="t">Logbook</title>
+  <desc id="d">Logbook: pick where the vault lives, Claude reads the Home note and open items at the start of each session, and each job adds one observed line to the Build Log</desc>
+  <defs>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+  </style>
+
+<g>
+<rect x="20.0" y="20" width="400.0" height="210" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="40.0" y="20" width="80" height="2" rx="1" fill="#3FE0F0" opacity="0.8"/>
+<text class="sans" x="40.0" y="54" font-size="16" font-weight="700" fill="#D8ECF7">1  Set up once</text>
+<text class="mono" x="40.0" y="86" font-size="13" fill="#3FE0F0">▢ Logbook · set up</text>
+<text class="mono" x="40.0" y="108" font-size="13" fill="#D8ECF7">iCloud (Obsidian)   Google Drive</text>
+<text class="mono" x="40.0" y="130" font-size="13" fill="#D8ECF7">OneDrive   This computer only</text>
+<text class="mono" x="40.0" y="152" font-size="13" fill="#D8ECF7">Inside this project</text>
+<text class="mono" x="40.0" y="174" font-size="13" fill="#D8ECF7">Use an existing vault</text>
+</g>
+<g>
+<rect x="440.0" y="20" width="400.0" height="210" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="460.0" y="20" width="80" height="2" rx="1" fill="#3DDC97" opacity="0.8"/>
+<text class="sans" x="460.0" y="54" font-size="16" font-weight="700" fill="#D8ECF7">2  Read every session</text>
+<text class="mono" x="460.0" y="86" font-size="13" fill="#3DDC97">logbook: 37 notes</text>
+<text class="mono" x="460.0" y="108" font-size="13" fill="#D8ECF7">index 49 lines · 12 open items</text>
+<text class="mono" x="460.0" y="130" font-size="13" fill="#D8ECF7">1.4k tokens · loaded whole</text>
+<text class="mono" x="460.0" y="152" font-size="13" fill="#D8ECF7">again after /compact and /clear</text>
+</g>
+<g>
+<rect x="860.0" y="20" width="400.0" height="210" rx="14" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="880.0" y="20" width="80" height="2" rx="1" fill="#E8B44A" opacity="0.8"/>
+<text class="sans" x="880.0" y="54" font-size="16" font-weight="700" fill="#D8ECF7">3  Logged from facts</text>
+<text class="mono" x="880.0" y="86" font-size="13" fill="#E8B44A">## 2026-10-20</text>
+<text class="mono" x="880.0" y="108" font-size="13" fill="#D8ECF7">- 14:32 · Fix the login</text>
+<text class="mono" x="880.0" y="130" font-size="13" fill="#D8ECF7">  3 of 3 steps</text>
+<text class="mono" x="880.0" y="152" font-size="13" fill="#D8ECF7">  changed: src/auth.ts</text>
+<text class="mono" x="880.0" y="174" font-size="13" fill="#D8ECF7">  checks: npm test passed</text>
+<text class="mono" x="880.0" y="196" font-size="13" fill="#D8ECF7">  commit a1b2c3d · observed</text>
+</g>
+</svg>

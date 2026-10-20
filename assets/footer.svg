@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 420" width="1280" height="420" role="img" aria-labelledby="t d">
+  <title id="t">The footer</title>
+  <desc id="d">The footer under the prompt: model, effort, git branch, a cache countdown and a rate-limit forecast, with the model and effort drawer that opens when you click the model.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }.pulse{animation:pulse 2.4s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1280" height="420" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="420" rx="18" fill="url(#grain)"/>
+<text class="mono" x="40" y="46" font-size="13" letter-spacing="3" fill="#5E7E96">FOOTER</text>
+<text class="sans" x="40" y="80" font-size="24" fill="#D8ECF7" font-weight="700" xml:space="preserve">Model, effort and the clock, under the prompt</text>
+<rect x="40" y="110" width="640" height="64" rx="10" fill="#06121C" stroke="#1A3850"/>
+<text class="mono" x="60" y="134" font-size="13" fill="#D8ECF7" xml:space="preserve">› </text>
+<text class="mono" x="76" y="134" font-size="13" fill="#3FE0F0" xml:space="preserve">▍</text>
+<line x1="40" y1="146" x2="680" y2="146" stroke="#1A3850"/>
+<text class="mono" x="60" y="166" font-size="13"><tspan fill="#3FE0F0">◈</tspan><tspan fill="#D8ECF7"> Opus 5.5 </tspan><tspan fill="#1B8FA6">▰</tspan><tspan fill="#5B78B4">▰</tspan><tspan fill="#9C6AC3">▰</tspan><tspan fill="#23425A">▱▱</tspan><tspan fill="#5E7E96"> high   </tspan><tspan fill="#3DDC97">⚓</tspan><tspan fill="#D8ECF7"> main</tspan><tspan fill="#3FE0F0">   cache 42m</tspan><tspan fill="#E8B44A">   empty in ~40m</tspan></text>
+<path d="M145.0 176 V190" stroke="#3FE0F0" stroke-opacity=".6" stroke-dasharray="3 3"/>
+<text class="mono" x="145.0" y="208" font-size="11" fill="#5E7E96" text-anchor="middle" xml:space="preserve">model</text>
+<path d="M247.0 176 V190" stroke="#3FE0F0" stroke-opacity=".6" stroke-dasharray="3 3"/>
+<text class="mono" x="247.0" y="208" font-size="11" fill="#5E7E96" text-anchor="middle" xml:space="preserve">effort</text>
+<path d="M333.0 176 V190" stroke="#3FE0F0" stroke-opacity=".6" stroke-dasharray="3 3"/>
+<text class="mono" x="333.0" y="208" font-size="11" fill="#5E7E96" text-anchor="middle" xml:space="preserve">branch</text>
+<path d="M425.0 176 V190" stroke="#3FE0F0" stroke-opacity=".6" stroke-dasharray="3 3"/>
+<text class="mono" x="425.0" y="208" font-size="11" fill="#5E7E96" text-anchor="middle" xml:space="preserve">prompt cache</text>
+<path d="M567.0 176 V190" stroke="#3FE0F0" stroke-opacity=".6" stroke-dasharray="3 3"/>
+<text class="mono" x="567.0" y="208" font-size="11" fill="#5E7E96" text-anchor="middle" xml:space="preserve">limit forecast</text>
+<text class="sans" x="40" y="250" font-size="14" fill="#D8ECF7" font-weight="700" xml:space="preserve">Click the model to open the drawer.</text>
+<text class="mono" x="40" y="276" font-size="12" fill="#5E7E96" xml:space="preserve">Effort turns amber when Claude Code lowers it.</text>
+<text class="mono" x="40" y="296" font-size="12" fill="#5E7E96" xml:space="preserve">The cache chip turns amber in its last two minutes, then reads cache cold.</text>
+<text class="mono" x="40" y="316" font-size="12" fill="#5E7E96" xml:space="preserve">The cache countdown comes from the status line script the installer sets.</text>
+<text class="mono" x="40" y="336" font-size="12" fill="#5E7E96" xml:space="preserve">The forecast shows when the pace of recent use would empty the 5-hour limit before it resets.</text>
+<text class="mono" x="40" y="356" font-size="12" fill="#5E7E96" xml:space="preserve">On API credits it reads "budget runs out in" when a budget is set.</text>
+<rect x="740" y="100" width="500" height="290" rx="12" fill="#0B1B2A" stroke="#1B8FA6"/>
+<text class="mono" x="760" y="130" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">M O D E L   A N D   E F F O R T</text>
+<text class="mono" x="760" y="166" font-size="12" fill="#5E7E96" xml:space="preserve">Model</text>
+<rect x="760" y="176" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="802.0" y="191" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Default</text>
+<rect x="852" y="176" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="894.0" y="191" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Fable</text>
+<rect x="944" y="176" width="84" height="22" rx="4" fill="#12283A" stroke="#3FE0F0"/>
+<text class="mono" x="986.0" y="191" font-size="13" fill="#3FE0F0" text-anchor="middle" xml:space="preserve">Opus</text>
+<rect x="1036" y="176" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1078.0" y="191" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Sonnet</text>
+<rect x="1128" y="176" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1170.0" y="191" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Haiku</text>
+<text class="mono" x="760" y="238" font-size="12" fill="#5E7E96" xml:space="preserve">Effort</text>
+<rect x="760" y="248" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="802.0" y="263" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">low</text>
+<rect x="852" y="248" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="894.0" y="263" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">medium</text>
+<rect x="944" y="248" width="84" height="22" rx="4" fill="#12283A" stroke="#3FE0F0"/>
+<text class="mono" x="986.0" y="263" font-size="13" fill="#3FE0F0" text-anchor="middle" xml:space="preserve">high</text>
+<rect x="1036" y="248" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1078.0" y="263" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">xhigh</text>
+<rect x="1128" y="248" width="84" height="22" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1170.0" y="263" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">max</text>
+<text class="mono" x="760" y="310" font-size="12" fill="#5E7E96" xml:space="preserve">Effort is also saved as your default for new chats.</text>
+</svg>

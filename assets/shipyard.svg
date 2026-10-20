@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 570" width="1280" height="570" role="img" aria-labelledby="t d">
+  <title id="t">The Shipyard</title>
+  <desc id="d">The Shipyard drawer: a Tools section with pin markers and up to five pinned tools, and an Add-ons section with rows for ponytail, REA, gstack, hookify and security-guidance showing status, reach tags and Add, Manage or Remove buttons, plus a Repeated prompts row.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1B2A"/><stop offset="0.55" stop-color="#06121C"/><stop offset="1" stop-color="#030B12"/></linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grain" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="4" fill="none"/><circle cx="1" cy="1" r="0.5" fill="#D8ECF7" opacity="0.035"/></pattern>
+  </defs>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, "Cascadia Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect width="1280" height="570" rx="18" fill="url(#sea)"/>
+  <rect width="1280" height="570" rx="18" fill="url(#grain)"/>
+<text class="mono" x="40" y="46" font-size="13" letter-spacing="3" fill="#5E7E96">SHIPYARD</text>
+<text class="sans" x="40" y="80" font-size="24" fill="#D8ECF7" font-weight="700" xml:space="preserve">One drawer for every tool and add-on</text>
+<text class="mono" x="40" y="120" font-size="11" fill="#5E7E96" xml:space="preserve">THE BAR</text>
+<rect x="40" y="130" width="520" height="40" rx="10" fill="#0B1B2A" stroke="#17324A"/>
+<rect x="56" y="138" width="84" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="64" y="153" font-size="13" fill="#FF5FD2" xml:space="preserve">◆</text>
+<text class="mono" x="82" y="153" font-size="13" fill="#D8ECF7" xml:space="preserve">Crew 2</text>
+<rect x="148" y="138" width="84" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="156" y="153" font-size="13" fill="#E8B44A" xml:space="preserve">✦</text>
+<text class="mono" x="174" y="153" font-size="13" fill="#D8ECF7" xml:space="preserve">Refine</text>
+<rect x="240" y="138" width="110" height="22" rx="4" fill="#12283A" stroke="none"/>
+<text class="mono" x="248" y="153" font-size="13" fill="#3DDC97" xml:space="preserve">●</text>
+<text class="mono" x="266" y="153" font-size="13" fill="#D8ECF7" xml:space="preserve">Clean: on</text>
+<rect x="358" y="138" width="110" height="22" rx="4" fill="#12283A" stroke="#3FE0F0"/>
+<text class="mono" x="366" y="153" font-size="13" fill="#3FE0F0" xml:space="preserve">⌬</text>
+<text class="mono" x="384" y="153" font-size="13" fill="#D8ECF7" xml:space="preserve">Shipyard</text>
+<text class="mono" x="40" y="196" font-size="12" fill="#5E7E96" xml:space="preserve">Up to 5 pinned tools sit on the bar.</text>
+<rect x="600" y="100" width="640" height="440" rx="12" fill="#0B1B2A" stroke="#1B8FA6"/>
+<text class="mono" x="620" y="130" font-size="15" fill="#3FE0F0" xml:space="preserve">⌬</text>
+<text class="mono" x="644" y="130" font-size="14" fill="#D8ECF7" font-weight="700" xml:space="preserve">S H I P Y A R D</text>
+<rect x="620" y="140" width="80" height="2" fill="#3FE0F0"/><rect x="702" y="140" width="518" height="1" fill="#17324A"/>
+<text class="mono" x="620" y="168" font-size="11" fill="#5E7E96" xml:space="preserve">TOOLS</text>
+<text class="mono" x="620" y="192" font-size="13" fill="#FF5FD2" xml:space="preserve">◆</text>
+<text class="mono" x="644" y="192" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Crew</text>
+<text class="mono" x="790" y="192" font-size="12" fill="#5E7E96" xml:space="preserve">2 helpers working</text>
+<text class="mono" x="1220" y="192" font-size="12" fill="#3FE0F0" text-anchor="end" xml:space="preserve">▪ pinned</text>
+<text class="mono" x="620" y="218" font-size="13" fill="#3FE0F0" xml:space="preserve">▤</text>
+<text class="mono" x="644" y="218" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Work Report</text>
+<text class="mono" x="790" y="218" font-size="12" fill="#5E7E96" xml:space="preserve">7 tasks today</text>
+<text class="mono" x="1220" y="218" font-size="12" fill="#5E7E96" text-anchor="end" xml:space="preserve">pin</text>
+<text class="mono" x="620" y="244" font-size="13" fill="#E8B44A" xml:space="preserve">✦</text>
+<text class="mono" x="644" y="244" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Refine</text>
+<text class="mono" x="790" y="244" font-size="12" fill="#5E7E96" xml:space="preserve">automatic mode off</text>
+<text class="mono" x="1220" y="244" font-size="12" fill="#3FE0F0" text-anchor="end" xml:space="preserve">▪ pinned</text>
+<text class="mono" x="620" y="270" font-size="13" fill="#3DDC97" xml:space="preserve">●</text>
+<text class="mono" x="644" y="270" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Clean View</text>
+<text class="mono" x="790" y="270" font-size="12" fill="#5E7E96" xml:space="preserve">on</text>
+<text class="mono" x="1220" y="270" font-size="12" fill="#3FE0F0" text-anchor="end" xml:space="preserve">▪ pinned</text>
+<text class="mono" x="620" y="296" font-size="13" fill="#5E7E96" xml:space="preserve">∘</text>
+<text class="mono" x="644" y="296" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Motion</text>
+<text class="mono" x="790" y="296" font-size="12" fill="#5E7E96" xml:space="preserve">on</text>
+<text class="mono" x="620" y="336" font-size="13" fill="#E8B44A" xml:space="preserve">↻</text>
+<text class="mono" x="644" y="336" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">Repeated prompts</text>
+<text class="mono" x="790" y="336" font-size="12" fill="#5E7E96" xml:space="preserve">×4  "run the tests and fix what fails"</text>
+<text class="mono" x="1220" y="336" font-size="12" fill="#E8B44A" text-anchor="end" xml:space="preserve">Make /command</text>
+<rect x="620" y="356" width="600" height="1" fill="#17324A"/>
+<text class="mono" x="620" y="378" font-size="11" fill="#5E7E96" xml:space="preserve">ADD-ONS</text>
+<text class="mono" x="620" y="404" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">ponytail</text>
+<text class="mono" x="778" y="404" font-size="12" fill="#5E7E96" xml:space="preserve">5.3.2 up to date</text>
+<text class="mono" x="930" y="404" font-size="11" fill="#E8B44A" xml:space="preserve">files hooks</text>
+<rect x="1140" y="389" width="80" height="20" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1180.0" y="402" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Remove</text>
+<text class="mono" x="620" y="428" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">REA</text>
+<text class="mono" x="778" y="428" font-size="12" fill="#5E7E96" xml:space="preserve"></text>
+<text class="mono" x="930" y="428" font-size="11" fill="#E8B44A" xml:space="preserve">network files server</text>
+<rect x="1140" y="413" width="80" height="20" rx="4" fill="#12283A" stroke="#3FE0F0"/>
+<text class="mono" x="1180.0" y="426" font-size="13" fill="#3FE0F0" text-anchor="middle" xml:space="preserve">Add</text>
+<text class="mono" x="620" y="452" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">gstack</text>
+<text class="mono" x="778" y="452" font-size="12" fill="#5E7E96" xml:space="preserve">updates itself</text>
+<text class="mono" x="930" y="452" font-size="11" fill="#E8B44A" xml:space="preserve">network files hooks server</text>
+<rect x="1140" y="437" width="80" height="20" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1180.0" y="450" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Remove</text>
+<text class="mono" x="620" y="476" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">hookify (yours)</text>
+<text class="mono" x="778" y="476" font-size="12" fill="#5E7E96" xml:space="preserve"></text>
+<text class="mono" x="930" y="476" font-size="11" fill="#E8B44A" xml:space="preserve">network files prompts hooks</text>
+<rect x="1140" y="461" width="80" height="20" rx="4" fill="#12283A" stroke="#23425A"/>
+<text class="mono" x="1180.0" y="474" font-size="13" fill="#D8ECF7" text-anchor="middle" xml:space="preserve">Manage</text>
+<text class="mono" x="620" y="500" font-size="13" fill="#D8ECF7" font-weight="700" xml:space="preserve">security-guidance</text>
+<text class="mono" x="778" y="500" font-size="12" fill="#5E7E96" xml:space="preserve"></text>
+<text class="mono" x="930" y="500" font-size="11" fill="#E8B44A" xml:space="preserve">network files prompts hooks</text>
+<rect x="1140" y="485" width="80" height="20" rx="4" fill="#12283A" stroke="#3FE0F0"/>
+<text class="mono" x="1180.0" y="498" font-size="13" fill="#3FE0F0" text-anchor="middle" xml:space="preserve">Add</text>
+<text class="mono" x="40" y="540" font-size="12" fill="#5E7E96" xml:space="preserve">Restart Claude Code after adding or updating an add-on.</text>
+<text class="mono" x="40" y="300" font-size="12" fill="#5E7E96" xml:space="preserve">Tags say what an add-on can reach:</text>
+<text class="mono" x="40" y="326" font-size="12" fill="#E8B44A" font-weight="700" xml:space="preserve">network</text>
+<text class="mono" x="110" y="326" font-size="12" fill="#D8ECF7" xml:space="preserve">talks to the internet</text>
+<text class="mono" x="40" y="350" font-size="12" fill="#E8B44A" font-weight="700" xml:space="preserve">files</text>
+<text class="mono" x="110" y="350" font-size="12" fill="#D8ECF7" xml:space="preserve">writes files on this machine</text>
+<text class="mono" x="40" y="374" font-size="12" fill="#E8B44A" font-weight="700" xml:space="preserve">prompts</text>
+<text class="mono" x="110" y="374" font-size="12" fill="#D8ECF7" xml:space="preserve">sees the prompts you send</text>
+<text class="mono" x="40" y="398" font-size="12" fill="#E8B44A" font-weight="700" xml:space="preserve">hooks</text>
+<text class="mono" x="110" y="398" font-size="12" fill="#D8ECF7" xml:space="preserve">runs hooks on Claude Code events</text>
+<text class="mono" x="40" y="422" font-size="12" fill="#E8B44A" font-weight="700" xml:space="preserve">server</text>
+<text class="mono" x="110" y="422" font-size="12" fill="#D8ECF7" xml:space="preserve">runs a server</text>
+</svg>
