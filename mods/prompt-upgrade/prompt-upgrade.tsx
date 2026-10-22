@@ -51,6 +51,7 @@ const flowAtom = atom({ plugin: 'carapace', key: 'promptUpgradeFlow' } as const,
 // The last prompt a person sent.
 const personPromptAtom = atom({ plugin: 'carapace', key: 'personPrompt' } as const, null)
 const historyAtom = atom({ plugin: 'carapace', key: 'promptUpgradeHistory' } as const, [])
+const typedAtom = atom({ plugin: 'carapace', key: 'promptUpgradeTyped' } as const, {})
 
 // Model calls in flight, by flow id and step. A reload empties it, so session.start resumes the step.
 const inFlight = new Set<string>()
@@ -335,7 +336,14 @@ function actions($: Engine): PaneActions {
 
   return {
     compose: async text => {
-      if (text.trim() !== '') await start($, text.trim())
+      if (text.trim() === '') return
+      await update($, typedAtom, () => ({}))
+      await start($, text.trim())
+    },
+    type: async (field, text) => {
+      // Keyed by the flow, so a new /refine never starts from an old draft.
+      const flow = await read($, flowAtom)
+      if (flow) await update($, typedAtom, t => ({ ...t, [`${flow.id}:${field}`]: text }))
     },
     choose: (index, option) => answer(index, 'answered', option),
     skip: index => answer(index, 'skipped', ''),
@@ -350,7 +358,9 @@ function actions($: Engine): PaneActions {
     },
     edit: async () => setFlow($, f => ({ ...f, isEditing: true, isCopied: false })),
     saveEdit: async text => {
-      if (text.trim() !== '') await send($, text.trim())
+      if (text.trim() === '') return
+      await update($, typedAtom, () => ({}))
+      await send($, text.trim())
     },
     copy: async surface => {
       const flow = await read($, flowAtom)
@@ -503,6 +513,6 @@ export function registerPromptUpgrade(on: On): void {
 
     const pal = PALETTES.deep
 
-    return drawPane(els, { flow, history, columns: e.props.bodyColumns, surface: e.surface, actions: actions($), pal, isFocused: e.props.isFocused })
+    return drawPane(els, { flow, history, typed: await read($, typedAtom), columns: e.props.bodyColumns, surface: e.surface, actions: actions($), pal, isFocused: e.props.isFocused })
   })
 }

@@ -1099,7 +1099,7 @@ export function registerDeck(on: On): void {
     return (
       <Box flexDirection="column" gap={1} width={cols + 2} backgroundColor={pal.surface} paddingX={1}>
         {paneTitle(els, pal, 'Report a problem', cols, undefined, Boolean(e.props.isFocused))}
-        {Input ? <Input key="report-text" label="What went wrong? " placeholder="Say it in a sentence or two" submitLabel="ok" autoFocus onInput={value => void update($, reportTextAtom, () => value)} onSubmit={value => void update($, reportTextAtom, () => value)} /> : null}
+        {Input ? <Input key="report-text" label="What went wrong? " placeholder="Say it in a sentence or two" rows={3} submitLabel="ok" autoFocus onInput={value => void update($, reportTextAtom, () => value)} onSubmit={value => void update($, reportTextAtom, () => value)} /> : null}
         <Box flexDirection="column">
           {line('Sent with it:', pal.muted)}
           {line(`  carapace ${details?.carapace ?? '...'} · Claude Code ${details?.claude ?? '...'}`)}

@@ -3,6 +3,7 @@ import type { Engine } from 'claude-code/testing'
 import type { On, PromptOrigin } from 'claude-code'
 
 import type { PromptUpgradeFlow as Flow } from '../../types'
+import { rowsFor } from './view'
 
 const PANE = 'prompt-upgrade'
 const ROUGH = 'make a landing page for my bakery'
@@ -283,4 +284,37 @@ test('Use it in automatic mode: the upgrade goes in the box, Enter sends it as t
   expect(w.submitted.at(-1)?.text).toBe(upgrade.trim())
   expect(w.submitted.at(-1)?.origin.kind).toBe('composer')
   expect((w.submitted.at(-1)?.context ?? []).join('\n')).toContain('exactly 3 independent pieces')
+})
+
+test('pure: a text box is 3 rows when short, grows a row per wrapped line, and stops at 12', () => {
+  expect(rowsFor('', 40)).toBe(3)
+  expect(rowsFor('a'.repeat(100), 40)).toBe(4)
+  expect(rowsFor('one\ntwo\nthree\nfour', 40)).toBe(5)
+  expect(rowsFor('a'.repeat(5000), 40)).toBe(12)
+})
+
+test('the prompt box grows as a long prompt is typed, keeps the text, and a new flow starts small', async ($, on) => {
+  const w = await world($, on)
+  await $.command.run({ command: 'refine', args: '' } as never)
+  const ui = await pane($, 60)
+  const box = async () => (await ui.findAll({ type: 'Input' }))[0]?.props as { rows?: number; value?: string }
+  // Older Claude Code (before Input took rows) drops the prop: the box stays one line, and the text must still be kept.
+  const hasRows = (await box()).rows !== undefined
+  if (hasRows) expect((await box()).rows).toBe(3)
+  const long = 'Write the release notes for this week, grouped by mod, with one plain line per change. '.repeat(4)
+  await ui.input({ key: 'compose', text: long, kind: 'change' })
+  await w.settle()
+  if (hasRows) expect((await box()).rows).toBeGreaterThan(5)
+  expect((await box()).value).toBe(long)
+  const firstId = w.flow()?.id
+  // Cancel ends the flow; the next /refine is a fresh one and starts small.
+  await ui.press({ key: 'cancel' })
+  await w.settle()
+  await ui.unmount()
+  await $.command.run({ command: 'refine', args: '' } as never)
+  expect(w.flow()?.id).not.toBe(firstId)
+  const again = await pane($, 60)
+  const fresh = (await again.findAll({ type: 'Input' }))[0]?.props as { rows?: number; value?: string }
+  expect(fresh.value).toBe('')
+  if (hasRows) expect(fresh.rows).toBe(3)
 })

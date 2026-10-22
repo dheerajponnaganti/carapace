@@ -3,7 +3,7 @@ import type { Elements, RenderElement, RenderSurface } from 'claude-code'
 import type { PromptUpgradeEntry, PromptUpgradeFlow } from '../../types'
 
 import { bigNumber } from '../shared/big-number'
-import { spaced } from '../shared/look'
+import { cells, spaced } from '../shared/look'
 import type { Palette } from '../shared/look'
 import { titleLit } from '../shared/ui'
 
@@ -20,6 +20,7 @@ export type PaneActions = {
   run: () => Promise<void>
   edit: () => Promise<void>
   saveEdit: (text: string) => Promise<void>
+  type: (field: 'compose' | 'edit', text: string) => Promise<void>
   copy: (surface: RenderSurface) => Promise<void>
   cancel: () => Promise<void>
   retry: () => Promise<void>
@@ -33,6 +34,7 @@ type Els = Elements[RenderSurface]
 type Draw = {
   flow: PromptUpgradeFlow | null
   history: readonly PromptUpgradeEntry[]
+  typed: Readonly<Record<string, string>>
   columns: number
   surface: RenderSurface
   actions: PaneActions
@@ -55,6 +57,13 @@ function when(at: number): string {
   const pad = (n: number) => String(n).padStart(2, '0')
 
   return `${d.getDate()} ${MONTHS[d.getMonth()]} ${pad(d.getHours())}:${pad(d.getMinutes())}`
+}
+
+/** Rows for a text box: every wrapped line of the text plus one to type into, from 3 to 12. A longer text scrolls inside. */
+export function rowsFor(text: string, width: number): number {
+  const lines = text.split('\n').reduce((n, line) => n + Math.max(1, Math.ceil(cells(line) / Math.max(10, width))), 0)
+
+  return Math.min(12, Math.max(3, lines + 1))
 }
 
 function stepIndex(flow: PromptUpgradeFlow): number {
@@ -189,6 +198,8 @@ export function drawPane(els: Els, draw: Draw): RenderElement {
 
   const current = stepIndex(flow)
 
+  const typed = (field: 'compose' | 'edit', fallback: string) => draw.typed[`${flow.id}:${field}`] ?? fallback
+
   if (flow.step === 'compose') {
     return page(
       tracker(current),
@@ -197,9 +208,11 @@ export function drawPane(els: Els, draw: Draw): RenderElement {
         <Input
           key="compose"
           placeholder="Type or paste your prompt"
-          value={flow.original}
+          value={typed('compose', flow.original)}
+          rows={rowsFor(typed('compose', flow.original), cols - 2)}
           submitLabel="Refine"
           autoFocus
+          onInput={value => void actions.type('compose', value)}
           onSubmit={value => void actions.compose(value)}
         />
       ) : (
@@ -278,6 +291,7 @@ export function drawPane(els: Els, draw: Draw): RenderElement {
               <Input
                 key={`q-${i}-input`}
                 placeholder="Type your answer"
+                rows={2}
                 submitLabel="Use this"
                 autoFocus
                 onSubmit={value => void actions.otherText(i, value)}
@@ -373,7 +387,7 @@ export function drawPane(els: Els, draw: Draw): RenderElement {
     flow.isEditing && Input ? (
       <Box key="upgrade" flexDirection="column" borderStyle="round" borderColor={LOOK.gold} paddingX={1} width={cols}>
         <Text color={LOOK.gold}>{fit('REFINED · EDITING', cols - 4)}</Text>
-        <Input key="edit" value={flow.rewrite} submitLabel="Use it" autoFocus onSubmit={value => void actions.saveEdit(value)} />
+        <Input key="edit" value={typed('edit', flow.rewrite)} rows={rowsFor(typed('edit', flow.rewrite), cols - 2)} submitLabel="Use it" autoFocus onInput={value => void actions.type('edit', value)} onSubmit={value => void actions.saveEdit(value)} />
         <Text color={LOOK.muted}>{fit('Enter runs it.', cols - 4)}</Text>
       </Box>
     ) : (

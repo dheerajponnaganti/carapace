@@ -159,6 +159,8 @@ declare module 'claude-code' {
       tick: number
       promptUpgradeAuto: boolean
       promptUpgradeFlow: PromptUpgradeFlow | null
+      /** What the person has typed so far in Refine's prompt and edit boxes, so the box can grow with it. */
+      promptUpgradeTyped: Record<string, string>
       promptUpgradeHistory: PromptUpgradeEntry[]
       agentDockSize: number
       agentDockPending: number | null

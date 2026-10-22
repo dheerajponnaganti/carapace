@@ -986,6 +986,7 @@ export function registerAgentDock(on: On): void {
             <Input
               key="watch-note-input"
               placeholder="A note for this helper"
+              rows={2}
               submitLabel="Send"
               autoFocus
               onSubmit={value => {

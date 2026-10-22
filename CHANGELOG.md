@@ -2,6 +2,10 @@
 
 Each release, newest first. The GitHub release for each tag has the same notes.
 
+## 0.1.0-beta.2
+
+- **Refine:** a long prompt no longer vanishes. The prompt and edit boxes grow with the text, from 3 to 12 lines, then scroll. The Other answer, the helper note and the problem report boxes show 2 to 3 lines. Needs a Claude Code version whose text boxes take a height; older versions keep one line (#1).
+
 ## 0.1.0-beta.1
 
 The first public beta.
