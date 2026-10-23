@@ -12,7 +12,11 @@ import { deckHealth } from '../deck/health'
 
 const usage = { input_tokens: 0, output_tokens: 0, cache_read_input_tokens: 0, cache_creation_input_tokens: 0, model: 'claude-opus-5-5' }
 
+// What the prompt box holds when a test reads it; prompts a plugin submits are recorded in `sent`.
+let typedPrompt = ''
+
 async function world($: Engine, on: On, env: Record<string, string> = {}) {
+  const sent: string[] = []
   let surfacing: CleanViewSurfacing | null = null
   const opened: string[] = []
   const toasts: string[] = []
@@ -34,7 +38,8 @@ async function world($: Engine, on: On, env: Record<string, string> = {}) {
     return { value: undefined }
   })
   on('ui.panes', () => ({ value: [] }))
-  on('prompt.read', () => ({ value: { text: '', cursor: 0 } }))
+  on('prompt.read', () => ({ value: { text: typedPrompt, cursor: 0 } }))
+  on('prompt.fill', () => ({ isFilled: true }))
   on('process.run', () => ({ value: { code: 0, stdout: '', stderr: '' } }))
   on('session.id', () => ({ value: 'session-1' }))
   on('settings.read', () => ({ value: { theme: 'dark' } }))
@@ -43,7 +48,7 @@ async function world($: Engine, on: On, env: Record<string, string> = {}) {
   on('session.start', ($, e) => ({ cwd: e.cwd }))
   on('turn.start', ($, e) => ({ turnId: e.turnId }))
   on('turn.complete', () => ({ text: '' }))
-  on('prompt.submit', ($, e) => ({ text: e.text }))
+  on('prompt.submit', ($, e) => (sent.push(e.text), { text: e.text }))
   on('tool.call', () => ({ result: { ok: true } }))
   on('state.set', { plugin: 'carapace', key: 'cleanViewSurfacing' }, ($, e, next) => {
     surfacing = e.value as CleanViewSurfacing | null
@@ -59,7 +64,7 @@ async function world($: Engine, on: On, env: Record<string, string> = {}) {
   })
   await $.session.start({ cwd: '/', surface: 'terminal', isInteractive: true })
 
-  return { clock, surfacing: () => surfacing, opened, closed, states, toasts }
+  return { clock, surfacing: () => surfacing, opened, closed, states, toasts, sent }
 }
 
 function card(id: string, task: string, status: AgentDockCard['status'], percent: number): AgentDockCard {
@@ -158,6 +163,23 @@ test('every bar button opens its mod or flips its switch', async ($, on) => {
   await settle()
   expect(w.states.cleanViewEnabled).toBe(true)
   await band.unmount()
+})
+
+test('with automatic mode off, the Refine button never takes a typed prompt: it is sent as typed', async ($, on) => {
+  typedPrompt = 'fix the login bug in the settings screen'
+  const w = await world($, on)
+  const band = await $.ui.mount({
+    plugin: 'carapace',
+    surface: 'terminal',
+    component: 'AbovePrompt',
+    props: { hasSurvey: false, isWorking: false, maxRows: 20, bodyColumns: 90, scroll: { offset: 0, bodyRows: 20 }, view: {} },
+  })
+  await band.press({ key: 'bar-refine' })
+  await settle()
+  expect(w.sent).toEqual(['fix the login bug in the settings screen'])
+  expect(w.closed).toContain('prompt-upgrade')
+  await band.unmount()
+  typedPrompt = ''
 })
 
 test('every row in /mods closes the deck and opens its mod', async ($, on) => {

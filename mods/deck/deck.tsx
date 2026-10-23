@@ -146,10 +146,26 @@ async function openLogbook($: Engine, title: string): Promise<void> {
   if (!opened.isPlaced) $.ui.toast(narrowText(title, opened.reason, 110))
 }
 
-/** Opens Refine: what /refine does. The prompt box's text, when there is some, goes in as the start. */
+/** Opens Refine on an empty prompt box: what /refine does. A typed prompt is never Refine's unless automatic mode is on. */
 async function openRefine($: Engine): Promise<void> {
   const opening = $.ui.open({ id: 'prompt-upgrade', title: 'Refine', focus: true, closeOnEscape: true })
   const typed = (await $.prompt.read()).text.trim()
+  // On Windows the bar can keep the keyboard after a pane closes, so the Enter meant for a typed prompt presses this
+  // button. With automatic mode off a typed prompt goes to Claude as typed; /refine <prompt> refines one on purpose.
+  if (typed !== '' && !(await read($, autoAtom))) {
+    await opening
+    await $.ui.close({ id: 'prompt-upgrade' })
+    if (typed.startsWith('/')) {
+      $.ui.toast('Your command is still in the prompt box. Click the box, then press Enter.', { timeoutMs: 5000 })
+
+      return
+    }
+    await $.prompt.fill({ text: '' })
+    await $.prompt.submit({ text: typed, asUser: true })
+    $.ui.log('Refine button pressed with a typed prompt while automatic mode is off: the prompt was sent as typed.')
+
+    return
+  }
   // A refine already under way (a prompt automatic mode took) is shown, never replaced: its words would be lost.
   const isNew = (await read($, flowAtom)) === null
   if (isNew) await update($, flowAtom, () => newFlow(typed, 'compose'))

@@ -2,6 +2,10 @@
 
 Each release, newest first. The GitHub release for each tag has the same notes.
 
+## 0.1.0-beta.3
+
+- **Refine:** with automatic mode off (the default), a typed prompt never goes to Refine. When the Enter meant for the prompt box lands on the ✦ Refine button (seen on Windows Terminal after a carapace pane closes), the prompt is sent as typed. Refine opens from the button only on an empty prompt box, and `/refine <prompt>` still refines on purpose (#2).
+
 ## 0.1.0-beta.2
 
 - **Refine:** a long prompt no longer vanishes. The prompt and edit boxes grow with the text, from 3 to 12 lines, then scroll. The Other answer, the helper note and the problem report boxes show 2 to 3 lines. Needs a Claude Code version whose text boxes take a height; older versions keep one line (#1).
